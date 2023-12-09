@@ -1,0 +1,83 @@
+@import "./mixins";
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+//swiper styles
+
+body {
+  @include siteMain;
+}
+
+h1 {
+  font-size: $fsize * 3;
+  color: map-get($colors, green);
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  background: transparent;
+  padding: 10px 25px;
+  border-radius: 25px;
+  @include transition(all 0.5s ease);
+}
+
+.green-btn {
+  @extend .link;
+  background-color: map-get($colors, primary);
+
+  &:hover {
+    background-color: darken(map-get($colors, primary), 20%);
+  }
+}
+
+.blue-btn {
+  @extend .link;
+  background-color: map-get($colors, secondary);
+
+  &:hover {
+    background-color: darken(map-get($colors, secondary), 20%);
+  }
+}
+
+.HomeSlider {
+  .swiper {
+    width: 100vw;
+    height: 80vh;
+    .swiper-slide {
+      position: relative;
+      .bannerimage {
+        position: relative;
+        z-index: 10;
+
+        &:before {
+          content: "";
+          @include linear-gradient(to right, map-get($colors, rgba(0, 0, 0)));
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.4;
+        }
+        .bannerimg {
+          object-fit: fill;
+        }
+      }
+
+      article {
+        position: absolute;
+        z-index: 10;
+        top: 35%;
+        left: 15%;
+        h2 {
+          font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+        }
+        p {
+          font-size: clamp(0.7rem, 1.1vw, 1.1rem);
+        }
+      }
+    }
+  }
+}
