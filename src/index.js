@@ -4,10 +4,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./assets/styles/main.scss";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "./assets/styles/main.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

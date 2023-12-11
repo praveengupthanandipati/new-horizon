@@ -41,10 +41,19 @@ a {
   }
 }
 
+header {
+  .nav-link {
+    color: map-get($colors, white) !important;
+  }
+}
+
 .HomeSlider {
   .swiper {
     width: 100vw;
     height: 80vh;
+    @include max(map-get($breakpoints, "md")) {
+      height: 100%;
+    }
     .swiper-slide {
       position: relative;
       .bannerimage {
@@ -71,13 +80,20 @@ a {
         z-index: 10;
         top: 35%;
         left: 15%;
+        @include max(map-get($breakpoints, "md")) {
+          left: 3%;
+          top: 25%;
+        }
         h2 {
-          font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+          font-size: clamp(1rem, 2.5vw, 2.5rem);
         }
         p {
           font-size: clamp(0.7rem, 1.1vw, 1.1rem);
         }
       }
     }
+  }
+  .swiper-pagination-bullet {
+    background: map-get($colors, white);
   }
 }

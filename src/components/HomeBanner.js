@@ -2,10 +2,10 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import Banner01 from "..//assets/img/banner01.jpg";
-import Banner02 from "..//assets/img/banner02.jpg";
-import Banner03 from "..//assets/img/banner03.jpg";
-import Banner04 from "..//assets/img/banner04.jpg";
+import Banner01 from "../assets/img/banner01.jpg";
+import Banner02 from "../assets/img/banner02.jpg";
+import Banner03 from "../assets/img/banner03.jpg";
+import Banner04 from "../assets/img/banner04.jpg";
 
 function HomeBanner() {
   const homeSliderItems = [
