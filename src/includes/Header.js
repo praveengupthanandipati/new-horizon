@@ -32,7 +32,7 @@ function Header() {
                       aria-current="page"
                       to="/"
                     >
-                      <span class="icon-award"></span> Home
+                      Home
                     </NavLink>
                   </li>
                   <li className="nav-item">

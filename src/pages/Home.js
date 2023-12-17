@@ -4,10 +4,26 @@ import AboutImage from "../assets/img/aboutimg.png";
 import PhytochemicalReferenceStandardsimage from "../assets/img/Phytochemical-Reference-Standards-image.jpg";
 import LeadPhytochemicalsimage from "../assets/img/Lead-Phytochemicals-image.jpg";
 import SyntheticanalogsofLeadimage from "../assets/img/Synthetic-analogs-of-Lead-image.jpg";
+import HomeProducts from "../components/HomeProducts";
+import Whychooseusimg from "../assets/img/whychooseusimg.jpg";
+import story01image from "../assets/img/story/storyimg01.jpg";
+import story02image from "../assets/img/story/storyimg02.jpg";
+import story03image from "../assets/img/story/storyimg03.jpg";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   let categoryTitleTop = "Categories";
   let categoryTitle = "Popular Categories";
+
+  let productTitleTop = "Popular Products";
+  let productTitle = "Products";
+
+  let whychooseusTitleTop = "Why Chooseus";
+  let whychooseusTitle = "BioSci Experts: Choose Excellence";
+
+  let storyTitleTop = "Our Stories";
+  let storyTitle = "Blogs & Articles";
+
   const abouthighlet = [
     {
       title: "1992",
@@ -22,21 +38,43 @@ function Home() {
       desc: "xport Percentage",
     },
   ];
-  const categoryHomeItems=[
+  const categoryHomeItems = [
     {
-    Image:PhytochemicalReferenceStandardsimage,
-    Title:"Phytochemical Reference Standards",
-    Desc:"Phytochemical reference standards are compounds used as benchmarks for identifying and quantifying bioactive",
+      Image: PhytochemicalReferenceStandardsimage,
+      Title: "Phytochemical Reference Standards",
+      Desc: "Phytochemical reference standards are compounds used as benchmarks for identifying and quantifying bioactive",
     },
     {
-    Image:LeadPhytochemicalsimage,
-    Title:"Lead Phytochemicals",
-    Desc:"Alkaloids, flavonoids, terpenoids, polyphenols, and saponins are prominent lead phytochemicals",
+      Image: LeadPhytochemicalsimage,
+      Title: "Lead Phytochemicals",
+      Desc: "Alkaloids, flavonoids, terpenoids, polyphenols, and saponins are prominent lead phytochemicals",
     },
     {
-    Image:SyntheticanalogsofLeadimage,
-    Title:"Synthetic analogs of Lead",
-    Desc:"Chemical derivatives mimicking lead compounds for pharmaceutical development and research purposes.",
+      Image: SyntheticanalogsofLeadimage,
+      Title: "Synthetic analogs of Lead",
+      Desc: "Chemical derivatives mimicking lead compounds for pharmaceutical development and research purposes.",
+    },
+  ];
+
+  const storyItems = [
+    {
+      Image: story01image,
+      ArticleBy: "Admin",
+      Date: "13st November 2023",
+      Title: "Unlocking Nature's Secrets: Innovations in Bioscience Research",
+    },
+    {
+      Image: story02image,
+      ArticleBy: "Admin",
+      Date: "13st November 2023",
+      Title:
+        "Revolutionizing Healthcare: The Impact of Bioscience Breakthroughs",
+    },
+    {
+      Image: story03image,
+      ArticleBy: "Admin",
+      Date: "13st November 2023",
+      Title: "Behind the Lab Doors: A Glimpse into Our Bioscience Discoveries",
     },
   ];
   return (
@@ -158,17 +196,169 @@ function Home() {
               <h3 class="font-bold">{categoryTitle}</h3>
             </div>
             <div className="row">
-              {categoryHomeItems.map((item)=>(
-               <div className="col-md-4">
+              {categoryHomeItems.map((item) => (
+                <div className="col-md-4">
                   <div className="cat-col">
-                     <img src={item.Image} alt="" className="img-fluid w-100"/>
-                     <article>
-                        <h4>{item.Title}</h4>
-                        <p>{item.Desc}</p>
-                     </article>
+                    <img src={item.Image} alt="" className="img-fluid w-100" />
+                    <article className="p-3">
+                      <h4 className="font-bold">{item.Title}</h4>
+                      <p>{item.Desc}</p>
+                    </article>
                   </div>
-               </div>
-               ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/*Popular Products*/}
+        <section className="HomeProducts">
+          <div className="container">
+            <div className="sectionTitle">
+              <h6>{productTitleTop}</h6>
+              <h3 class="font-bold">{productTitle}</h3>
+            </div>
+          </div>
+          {/*products carousel */}
+          <div className="products-carousel">
+            <HomeProducts />
+          </div>
+        </section>
+        {/*why choose us section */}
+        <section className="homeWhyChooseus">
+          <div className="container">
+            <div className="sectionTitle">
+              <h6>{whychooseusTitleTop}</h6>
+              <h3 class="font-bold">{whychooseusTitle}</h3>
+            </div>
+            <div className="row py-2 pymd-5">
+              <div className="col-md-4 align-self-center">
+                <div className="whycol d-flex">
+                  <div>
+                    <span class="icon-research icomoon"></span>
+                  </div>
+                  <div className="ps-4">
+                    <h5 className="font-bold font-secondary">
+                      Cutting-Edge Research
+                    </h5>
+                    <p>
+                      Highlight your company's commitment to pioneering research
+                      and groundbreaking discoveries in the field of bioscience.
+                    </p>
+                  </div>
+                </div>
+                <div className="whycol d-flex">
+                  <div>
+                    <span class="icon-costumer icomoon"></span>
+                  </div>
+                  <div className="ps-4">
+                    <h5 className="font-bold font-secondary">Expert Team</h5>
+                    <p>
+                      Introduce the skilled and experienced team members who
+                      drive your company's success.
+                    </p>
+                  </div>
+                </div>
+                <div className="whycol d-flex">
+                  <div>
+                    <span class="icon-observation icomoon"></span>
+                  </div>
+                  <div className="ps-4">
+                    <h5 className="font-bold font-secondary">
+                      State-of-the-Art Facilities
+                    </h5>
+                    <p>
+                      Showcase your top-tier laboratories, equipment, and
+                      facilities. Explain how your cutting-edge infrastructure
+                      supports.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <img
+                  src={Whychooseusimg}
+                  alt=""
+                  className="img-fluid whychooseusimg"
+                />
+              </div>
+              <div className="col-md-4 align-self-center">
+                <div className="whycol d-flex">
+                  <div>
+                    <span class="icon-conversation icomoon"></span>
+                  </div>
+                  <div className="ps-4">
+                    <h5 className="font-bold font-secondary">
+                      Industry Partnerships
+                    </h5>
+                    <p>
+                      Highlight strategic collaborations and partnerships with
+                      key players in the bioscience industry.
+                    </p>
+                  </div>
+                </div>
+                <div className="whycol d-flex">
+                  <div>
+                    <span class="icon-laboratory icomoon"></span>
+                  </div>
+                  <div className="ps-4">
+                    <h5 className="font-bold font-secondary">
+                      Commitment to Ethical Practices
+                    </h5>
+                    <p>
+                      Emphasize your company's commitment to ethical research
+                      practices, environmental sustainability, and social
+                      responsibility.
+                    </p>
+                  </div>
+                </div>
+                <div className="whycol d-flex">
+                  <div>
+                    <span class="icon-goal icomoon"></span>
+                  </div>
+                  <div className="ps-4">
+                    <h5 className="font-bold font-secondary">
+                      Proven Track Record
+                    </h5>
+                    <p>
+                      Provide evidence of successful outcomes, product
+                      developments, or scientific contributions resulting from
+                      your company's work. Share testimonials, case studies.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* stories home page */}
+        <section className="HomeStories">
+          <div className="container">
+            <div className="sectionTitle pb-3">
+              <h6>{storyTitleTop}</h6>
+              <h3 class="font-bold">{storyTitle}</h3>
+            </div>
+
+            <div className="row">
+              {storyItems.map((item) => (
+                <div className="col-md-4">
+                  <div className="storyItem shadow">
+                    <NavLink href="">
+                      <img src={item.Image} alt="" className="img-fluid" />
+                    </NavLink>
+                    <article className="p-3">
+                      <p className="small d-flex justify-content-between">
+                        <small>Article by {item.ArticleBy}</small>
+                        <small>
+                          <i>On: {item.Date} </i>
+                        </small>
+                      </p>
+                      <h5 className="font-bold">{item.Title}</h5>
+                    </article>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
