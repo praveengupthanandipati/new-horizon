@@ -21,11 +21,13 @@ a {
   padding: 10px 25px;
   border-radius: 25px;
   @include transition(all 0.5s ease);
+  display: inline-block;
 }
 
 .green-btn {
   @extend .link;
   background-color: map-get($colors, primary);
+  color: map-get($colors, white);
 
   &:hover {
     background-color: darken(map-get($colors, primary), 20%);
@@ -37,7 +39,7 @@ a {
   background-color: map-get($colors, secondary);
 
   &:hover {
-    background-color: darken(map-get($colors, secondary), 20%);
+    background-color: darken(map-get($colors, secondary), 30%);
   }
 }
 
@@ -48,11 +50,12 @@ header {
 }
 
 .HomeSlider {
+  height: auto;
   .swiper {
     width: 100vw;
     height: 80vh;
-    @include max(map-get($breakpoints, "md")) {
-      height: 100%;
+    @include max(map-get($breakpoints, "xl")) {
+      height: auto;
     }
     .swiper-slide {
       position: relative;
@@ -96,4 +99,89 @@ header {
   .swiper-pagination-bullet {
     background: map-get($colors, white);
   }
+}
+
+.highlets {
+  width: 100%;
+  .highlets-col {
+    .h5 {
+      font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+    }
+    p {
+      font-size: clamp(0.8rem, 1vw, 1rem);
+    }
+    @include max(map-get($breakpoints, "lg")) {
+      margin-bottom: 15px;
+    }
+    .icon {
+      .icomoon {
+        font-size: clamp(1.5rem, 4vw, 4rem);
+      }
+    }
+  }
+}
+
+.sectionTitle {
+  h6 {
+    font-size: clamp(0.6rem, 0.8vw, 0.8rem);
+    background: map-get($colors, secondary);
+    display: inline-block;
+    color: map-get($colors, white);
+    text-transform: uppercase;
+    padding: 3px 10px;
+    letter-spacing: 2px;
+  }
+  h3 {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color: map-get($colors, black);
+  }
+}
+
+.Homeabout {
+  background: map-get($colors, lightgray) url(../img/aboutbg-pattern.png)
+    no-repeat 0 0;
+
+  .aboutImage {
+    text-align: right;
+    position: relative;
+
+    .ExpNumber {
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      background: map-get($colors, white);
+      position: absolute;
+      top: 25%;
+      left: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .num {
+        font-size: clamp(2rem, 5vw, 5rem);
+        line-height: 110%;
+        color: map-get($colors, primary);
+      }
+    }
+  }
+  .company-highletscol {
+    padding: 50px 0;
+    color: map-get($colors, black);
+    .col-4 {
+      border-right-color: map-get($colors, black) !important;
+
+      h3 {
+        font-size: clamp(1.5rem, 3vw, 3rem);
+      }
+      p {
+        font-size: clamp(0.7rem, 1vw, 1rem);
+      }
+    }
+  }
+}
+
+.HomeCategories {
+  background: lighten(map-get($colors, primary), 52%);
+  padding: 50px 0;
 }

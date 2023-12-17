@@ -8,6 +8,7 @@ import "./assets/styles/main.scss";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "./assets/styles/icomoon.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
