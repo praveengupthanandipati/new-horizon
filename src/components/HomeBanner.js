@@ -52,7 +52,7 @@ function HomeBanner() {
                 <img
                   src={item.imageName}
                   alt=""
-                  className="img-fluid w-100 bannerimg"
+                  className="img-fluid bannerimg"
                 />
               </div>
               <article>

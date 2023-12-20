@@ -1,14 +1,33 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+// import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/img/logo.svg";
+import Logo from "../assets/img/logo-color.svg";
 
 function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const shouldAddClass = scrollTop > 100; // Adjust this value as needed
+      setIsScrolled(shouldAddClass);
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Detach the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); //
+
   return (
     <div>
-      <header className="fixed-top">
+      <header className={isScrolled ? "fixed-top-nav fixed-top" : "fixed-top"}>
         <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light">
+          <nav className="navbar navbar-expand-lg navbar-light shadow">
             <div className="container-fluid">
               <NavLink className="navbar-brand" to="/">
                 <img src={Logo} alt="" />
