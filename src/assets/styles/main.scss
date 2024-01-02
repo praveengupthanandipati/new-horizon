@@ -44,9 +44,10 @@ a {
 .blue-btn {
   @extend .link;
   background-color: map-get($colors, secondary);
+  color: map-get($colors, white);
 
   &:hover {
-    background-color: darken(map-get($colors, secondary), 30%);
+    background-color: darken(map-get($colors, secondary), 10%);
   }
 }
 
@@ -347,9 +348,6 @@ footer {
     .h1 {
       font-size: clamp(1.8rem, 2.5vw, 2.5rem);
     }
-    p {
-      font-size: clamp(0.8rem, 1.1vw, 1.1rem);
-    }
   }
   .breadcrumb-item + .breadcrumb-item.active {
     color: map-get($colors, black);
@@ -361,9 +359,70 @@ footer {
   }
   .subPageMain {
     min-height: 500px;
-
+    p {
+      font-size: clamp(0.8rem, 1vw, 1rem);
+      line-height: 1.5vw;
+    }
+    .h2 {
+      position: relative;
+      &:before {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background: map-get($colors, primary);
+        position: absolute;
+        left: 0;
+        top: -10px;
+      }
+    }
     .pageContainer {
       padding: 50px 0;
+
+      .h5 {
+        line-height: 30px;
+      }
+    }
+    .list-items {
+      padding-left: 20px;
+      li {
+        font-size: clamp(0.8rem, 1vw, 1rem);
+        line-height: 1.5vw;
+        position: relative;
+        list-style-type: disc;
+        list-style-position: outside;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+.experience-div {
+  background: map-get($colors, primary);
+  width: 75%;
+  margin: -100px auto 0 auto;
+  padding: 50px 0;
+  text-align: center;
+
+  .count {
+    font-size: clamp(3rem, 8vw, 8rem);
+    color: map-get($colors, white);
+    line-height: 7rem;
+  }
+}
+
+.contactForm {
+  .form-control {
+    padding: 12px;
+    background: map-get($colors, lightgray);
+    border-radius: 0;
+    border: none;
+
+    &:focus {
+      outline: 1px solid map-get($colors, lightprimary);
+      box-shadow: none;
+    }
+    &::placeholder {
+      font-size: $fsize - 1;
     }
   }
 }

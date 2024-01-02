@@ -17,7 +17,9 @@ function Footer() {
                   For deciding the quality of the plant material and herbal
                   formulations, assay for chemical markers is an important
                   parameter necessarily to be studied{" "}
-                  <NavLink className="font-bold">Read More</NavLink>
+                  <NavLink className="font-bold" to="/About">
+                    Read More
+                  </NavLink>
                 </p>
               </article>
             </div>
@@ -27,10 +29,13 @@ function Footer() {
                   <h5 className="footer-col-title font-bold">Company</h5>
                   <ul>
                     <li>
-                      <NavLink to="">Home</NavLink>
+                      <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
-                      <NavLink to="">About us</NavLink>
+                      <NavLink to="/About">About us</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="">Services</NavLink>
                     </li>
                     <li>
                       <NavLink to="">Blogs</NavLink>

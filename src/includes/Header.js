@@ -46,11 +46,7 @@ function Header() {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ms-auto">
                   <li className="nav-item">
-                    <NavLink
-                      className="nav-link active"
-                      aria-current="page"
-                      to="/"
-                    >
+                    <NavLink className="nav-link" aria-current="page" to="/">
                       Home
                     </NavLink>
                   </li>
@@ -65,12 +61,12 @@ function Header() {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="" tabindex="-1">
+                    <NavLink className="nav-link" to="/Services" tabindex="-1">
                       Services
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="" tabindex="-1">
+                    <NavLink className="nav-link" to="/Contact" tabindex="-1">
                       Contact
                     </NavLink>
                   </li>
