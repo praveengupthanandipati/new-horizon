@@ -54,7 +54,7 @@ function About() {
                   </figure>
                 </div>
                 <div className="col-md-6 align-self-center">
-                  <h2 className="h2 font-semibold font-black pb-2">
+                  <h2 className="h2 font-bold font-black pb-2">
                     We’ll Ensure You Alwasy Get Best Results.
                   </h2>
                   <h5 className="h5 font-primary font-semibold">
@@ -62,7 +62,7 @@ function About() {
                     hub of India.
                   </h5>
                   <p>
-                    . Incorporated with a very humble approach dedicated to
+                    Incorporated with a very humble approach dedicated to
                     research and development of Phytochemicals. New product
                     development and market oriented research is our main focus
                     and thrust. Our vast natural resource combined with
@@ -84,7 +84,7 @@ function About() {
                   <img src={about02} alt="" className="img-fluid w-100 mb-4" />
                 </div>
                 <div className="col-md-6 align-self-center">
-                  <h2 className="h2 font-semibold font-black pb-2">
+                  <h2 className="h2 font-bold font-black pb-2">
                     Exploring the Frontiers of Life and Discovery
                   </h2>
                   <p>

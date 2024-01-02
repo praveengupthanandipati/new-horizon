@@ -61,7 +61,7 @@ function Services() {
             </div>
             <div className="row">
               <div className="col-md-12">
-                <h5 className="font-semibold font-primary">Advantages:</h5>
+                <h5 className="font-bold font-primary">Advantages:</h5>
                 <ul className="list-items pt-2">
                   <li>
                     <strong>Targeted Drug Discovery:</strong> Researchers can
@@ -103,7 +103,7 @@ function Services() {
                 <img src={about02} alt="" className="img-fluid w-100 mb-4" />
               </div>
               <div className="col-md-6 align-self-center">
-                <h2 className="h2 font-semibold font-black pb-2">
+                <h2 className="h2 font-bold font-black pb-2">
                   Technical services
                 </h2>
                 <p>

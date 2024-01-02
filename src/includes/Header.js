@@ -56,7 +56,7 @@ function Header() {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="" tabindex="-1">
+                    <NavLink className="nav-link" to="/Products" tabindex="-1">
                       Products
                     </NavLink>
                   </li>
