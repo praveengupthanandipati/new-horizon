@@ -346,16 +346,16 @@ function Home() {
                   <div className="storyItem shadow">
                     <NavLink href="">
                       <img src={item.Image} alt="" className="img-fluid" />
+                      <article className="p-3">
+                        <p className="small d-flex justify-content-between">
+                          <small>Article by {item.ArticleBy}</small>
+                          <small>
+                            <i>On: {item.Date} </i>
+                          </small>
+                        </p>
+                        <h5 className="font-bold">{item.Title}</h5>
+                      </article>
                     </NavLink>
-                    <article className="p-3">
-                      <p className="small d-flex justify-content-between">
-                        <small>Article by {item.ArticleBy}</small>
-                        <small>
-                          <i>On: {item.Date} </i>
-                        </small>
-                      </p>
-                      <h5 className="font-bold">{item.Title}</h5>
-                    </article>
                   </div>
                 </div>
               ))}

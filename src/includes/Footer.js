@@ -35,13 +35,13 @@ function Footer() {
                       <NavLink to="/About">About us</NavLink>
                     </li>
                     <li>
-                      <NavLink to="">Services</NavLink>
+                      <NavLink to="/Services">Services</NavLink>
                     </li>
                     <li>
-                      <NavLink to="">Blogs</NavLink>
+                      <NavLink to="/Blog">Blogs</NavLink>
                     </li>
                     <li>
-                      <NavLink to="">Contact</NavLink>
+                      <NavLink to="/Contact">Contact</NavLink>
                     </li>
                   </ul>
                 </div>

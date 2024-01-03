@@ -303,6 +303,15 @@ header {
       font-size: clamp(1rem, 1.1vw, 1.1rem);
       line-height: 140%;
     }
+    a {
+      color: map-get($colors, black);
+    }
+
+    &:hover {
+      h5 {
+        color: map-get($colors, primary);
+      }
+    }
   }
 }
 

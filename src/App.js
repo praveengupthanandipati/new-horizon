@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="Products" Component={Products} />
           <Route exact path="Services" Component={Services} />
           <Route exact path="Contact" Component={Contact} />
+          <Route exact path="Blog" Component={Blog}/>
         </Routes>
         <Footer />
       </BrowserRouter>
