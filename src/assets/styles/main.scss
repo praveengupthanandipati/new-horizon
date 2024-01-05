@@ -44,6 +44,7 @@ p {
 
   &:hover {
     background-color: darken(map-get($colors, primary), 20%);
+    color: map-get($colors, white);
   }
 }
 
@@ -318,7 +319,12 @@ header {
 footer {
   font-size: $fsize;
   margin-top: 50px;
-  background: lighten(map-get($colors, primary), 40%);
+  // background: lighten(map-get($colors, primary), 40%);
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(104, 183, 249, 0.2) 31.3%,
+    rgba(176, 248, 200, 0.2) 100.2%
+  );
   padding: 50px 0 0 0;
 
   .footer-col-title {
@@ -367,11 +373,27 @@ footer {
       font-size: clamp(1.8rem, 2.5vw, 2.5rem);
     }
   }
-  .breadcrumb-item + .breadcrumb-item.active {
+  .breadcrumb-item {
     color: map-get($colors, black);
     font-size: $fsize - 1;
     &:before {
-      content: "\e90f";
+      content: "\e90f" !important;
+      font-family: "icomoon" !important;
+    }
+
+    &:first-child {
+      &:before {
+        content: " ";
+        display: none;
+      }
+    }
+  }
+
+  .breadcrumb-item.active {
+    color: map-get($colors, black);
+    font-size: $fsize - 1;
+    &:before {
+      content: "\e90f" !important;
       font-family: "icomoon" !important;
     }
   }
@@ -441,6 +463,88 @@ footer {
     }
     &::placeholder {
       font-size: $fsize - 1;
+    }
+  }
+}
+
+.nav-pills {
+  .nav-link.active {
+    background: map-get($colors, secondary);
+  }
+  .nav-link {
+    background: lighten(map-get($colors, secondary), 75%);
+    margin-right: 5px;
+    color: map-get($colors, black);
+  }
+}
+
+.table-responsive {
+  margin-top: 25px;
+  table {
+    thead {
+      tr {
+        th {
+          background: map-get($colors, primary);
+          color: map-get($colors, white);
+        }
+      }
+    }
+  }
+}
+
+.product-desc-item {
+  // background: lighten(map-get($colors, black), 90%);
+  margin: 0 0 35px 0;
+  // border-left: 2px solid map-get($colors, primary);
+  // padding-left: 15px;
+  p {
+    font-size: $fsize - 3 !important;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    color: lighten(map-get($colors, black), 50%);
+
+    &:before {
+      content: "";
+      width: 25px;
+      height: 2px;
+      background: map-get($colors, primary);
+      position: absolute;
+      top: -3px;
+      left: 0;
+    }
+  }
+  .h6 {
+    font-size: $fsize + 2;
+  }
+}
+
+.ProductEnquiryform {
+  background: lighten(map-get($colors, primary), 50%);
+
+  form {
+    .form-group {
+      .form-label {
+        font-size: $fsize - 3;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 3px;
+        padding-bottom: 0;
+      }
+      .form-control,
+      .form-select {
+        border-radius: 0;
+        border: none;
+        padding: 12px;
+        font-size: $fsize - 1;
+        border: 1px solid lighten(map-get($colors, primary), 50%);
+        &:focus {
+          box-shadow: none;
+          border: 1px solid map-get($colors, primary);
+        }
+      }
+    }
+    textarea {
+      height: 120px;
     }
   }
 }
