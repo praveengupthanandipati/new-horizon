@@ -1,9 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import phytochemicals from "../data/Phytochemicals_data";
+import PhytochemicalsPdf from "../assets/files/Listofphytochemicalswithstructuresandactivity.pdf";
 
 function Products() {
   const pageTitle = "Products";
   const pageIntro = "Our Popular Products";
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    navigate(`/Product-Detail?q=${id}`);
+  };
+
   return (
     <div>
       <section className="subPage">
@@ -84,9 +92,25 @@ function Products() {
                   aria-labelledby="pills-Phytochemical-Reference-Standards-tab"
                   tabindex="0"
                 >
+                  <div className="row">
+                    <div className="col-md-6"></div>
+
+                    <div className="col-md-6">
+                      <div className="text-end">
+                        <NavLink
+                          className="btn border font-secondary"
+                          to={PhytochemicalsPdf}
+                          target="_blank"
+                        >
+                          List of Phytochemicals with structure activities
+                        </NavLink>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* table responsive starts here */}
                   <div className="table-responsive">
-                    <table className="table table-striped table-hover table-bordered">
+                    <table className="table table-hover">
                       <thead>
                         <tr>
                           <th scope="col">Chemical Name</th>
@@ -94,18 +118,16 @@ function Products() {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td width="85%">
-                            <NavLink to="/Product-Detail">Pellitorine</NavLink>
-                          </td>
-                          <td width="15%">18836-52-7</td>
-                        </tr>
-                        <tr>
-                          <td width="85%">
-                            <NavLink to="">(S)-(+)-Turmerone,Ar</NavLink>
-                          </td>
-                          <td width="15%">532-65-0</td>
-                        </tr>
+                        {phytochemicals.map((item, index) => (
+                          <tr key={index}>
+                            <td width="85%">
+                              <a href="" onClick={() => handleClick(item.id)}>
+                                {item.Product}
+                              </a>
+                            </td>
+                            <td width="15%">{item.CASNumber}</td>
+                          </tr>
+                        ))}
                       </tbody>
                     </table>
                   </div>
@@ -120,25 +142,25 @@ function Products() {
                 >
                   {/* table responsive starts here */}
                   <div className="table-responsive">
-                    <table className="table table-striped table-hover table-bordered">
+                    <table className="table table-hover">
                       <thead>
                         <tr>
                           <th scope="col">Chemical Name</th>
                           <th scope="col">CAS Number</th>
+                          <th scope="col">Technical Note</th>
+                          <th scope="col">COA & Spectrual data</th>
+                          <th scope="col">Analogs</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td width="85%">
+                          <td>
                             <NavLink to="">Pellitorine</NavLink>
                           </td>
                           <td width="15%">18836-52-7</td>
-                        </tr>
-                        <tr>
-                          <td width="85%">
-                            <NavLink to="">(S)-(+)-Turmerone,Ar</NavLink>
-                          </td>
-                          <td width="15%">532-65-0</td>
+                          <td width="15%">18836-52-7</td>
+                          <td width="15%">18836-52-7</td>
+                          <td width="15%">18836-52-7</td>
                         </tr>
                       </tbody>
                     </table>
@@ -154,25 +176,25 @@ function Products() {
                 >
                   {/* table responsive starts here */}
                   <div className="table-responsive">
-                    <table className="table table-striped table-hover table-bordered">
+                    <table className="table table-hover">
                       <thead>
                         <tr>
                           <th scope="col">Chemical Name</th>
                           <th scope="col">CAS Number</th>
+                          <th scope="col">Technical Note</th>
+                          <th scope="col">COA & Spectrual data</th>
+                          <th scope="col">Analogs</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td width="85%">
+                          <td>
                             <NavLink to="">Pellitorine</NavLink>
                           </td>
                           <td width="15%">18836-52-7</td>
-                        </tr>
-                        <tr>
-                          <td width="85%">
-                            <NavLink to="">(S)-(+)-Turmerone,Ar</NavLink>
-                          </td>
-                          <td width="15%">532-65-0</td>
+                          <td width="15%">18836-52-7</td>
+                          <td width="15%">18836-52-7</td>
+                          <td width="15%">18836-52-7</td>
                         </tr>
                       </tbody>
                     </table>

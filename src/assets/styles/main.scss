@@ -486,6 +486,23 @@ footer {
         th {
           background: map-get($colors, primary);
           color: map-get($colors, white);
+          font-size: $fsize - 1;
+          padding: 12px;
+        }
+      }
+    }
+    td {
+      border-style: dashed;
+      border-bottom: 1px dashed lighten(map-get($colors, gray), 30%);
+      font-size: $fsize - 1;
+      padding: 12px;
+
+      a {
+        color: map-get($colors, black);
+
+        &:hover {
+          text-decoration: underline;
+          color: map-get($colors, primary);
         }
       }
     }

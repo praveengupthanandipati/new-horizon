@@ -1,9 +1,25 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import Product02 from "../assets/img/products/product02.png";
+import { React, useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+// import Product02 from "../assets/img/products/product02.png";
+import phytochemicals from "../data/Phytochemicals_data";
 
 const ProductDetail = () => {
   const pageTitle = "Pellitorine";
+  const { search } = useLocation();
+  const queryParams = new URLSearchParams(search);
+  const id = queryParams.get("q");
+  //   console.log(id);
+  const [product, setProduct] = useState(null);
+  useEffect(() => {
+    const foundProduct = phytochemicals.find(
+      (item) => item.id.toString() === id
+    );
+    setProduct(foundProduct);
+  }, [phytochemicals, id]);
+
+  if (!product) {
+    return <div>Product not found</div>;
+  }
   return (
     <div>
       <section className="subPage">
@@ -12,7 +28,7 @@ const ProductDetail = () => {
           <div className="container">
             <div className="row pt-5">
               <div className="col-lg-6 col-md-10">
-                <h1 className="h1 font-bold">{pageTitle}</h1>
+                <h1 className="h1 font-bold">{product.Product}</h1>
               </div>
             </div>
           </div>
@@ -30,7 +46,7 @@ const ProductDetail = () => {
                   <NavLink to="/Products">Products</NavLink>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  {pageTitle}
+                  {product.Product}
                 </li>
               </ol>
             </nav>
@@ -40,7 +56,7 @@ const ProductDetail = () => {
               <div className="row">
                 <div className="col-md-4">
                   <figure className="border p-3 rounded-3 text-center sticky-top">
-                    <img src={Product02} className="img-fluid" />
+                    <img src={product.Image} className="img-fluid" />
                   </figure>
                 </div>
                 <div className="col-md-8">
@@ -50,7 +66,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           Botanical Source
                         </p>
-                        <h6 className="h6">Piper longum</h6>
+                        <h6 className="h6">{product.BotanicalSource}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -58,9 +74,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           IUPAC Name
                         </p>
-                        <h6 className="h6">
-                          (2E,4E)-N-(2-Methylpropyl)-2,4-decadienamide
-                        </h6>
+                        <h6 className="h6">{product.IUPACName}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -68,7 +82,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           Synonyms
                         </p>
-                        <h6 className="h6">trans-Pellitorin</h6>
+                        <h6 className="h6">{product.Synonyms}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -77,7 +91,7 @@ const ProductDetail = () => {
                           CAS Number
                         </p>
                         <h6 className="h6">
-                          <strong>18836-52-7</strong>
+                          <strong>{product.CASNumber}</strong>
                         </h6>
                       </div>
                     </div>
@@ -86,9 +100,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           Molecular Formula
                         </p>
-                        <h6 className="h6">
-                          C<sub>14</sub>H<sub>25</sub>NO
-                        </h6>
+                        <h6 className="h6">{product.MolecularFormula}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -96,7 +108,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           Molecular weight
                         </p>
-                        <h6 className="h6">223.35</h6>
+                        <h6 className="h6">{product.MolecularWeight}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -104,7 +116,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           Appearance
                         </p>
-                        <h6 className="h6">White powder</h6>
+                        <h6 className="h6">{product.Appearance}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -112,7 +124,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           Purity
                         </p>
-                        <h6 className="h6">98%</h6>
+                        <h6 className="h6">{product.Purity}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -120,7 +132,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           HRMS(ESI)
                         </p>
-                        <h6 className="h6">Not Available</h6>
+                        <h6 className="h6">{product.HRMS_ESI}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -128,7 +140,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           Specific Rotation [a]D 20
                         </p>
-                        <h6 className="h6">Not Available</h6>
+                        <h6 className="h6">{product.SpecificRotation_aD20}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -136,7 +148,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           SMILES
                         </p>
-                        <h6 className="h6">O=C(/C=C/C=C/CCCCC)NCC(C)C</h6>
+                        <h6 className="h6">{product.SMILES}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -144,7 +156,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           InChI Key
                         </p>
-                        <h6 className="h6">MAGQQZHFHJDIRE-BNFZFUHLSA-N</h6>
+                        <h6 className="h6">{product.InChIKey}</h6>
                       </div>
                     </div>
                     <div className="col-md-12">
@@ -152,9 +164,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           InChI Code
                         </p>
-                        <h6 className="h6">
-                          InChI=1S/C14H25NO/c1-4-5-6-7-8-9-10-11-14(16)15-12-13(2)3/h8-11,13H,4-7,12H2,1-3H3,(H,15,16)/b9-8+,11-10+
-                        </h6>
+                        <h6 className="h6">{product.InChICode}</h6>
                       </div>
                     </div>
 
@@ -163,7 +173,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           PubChem CID
                         </p>
-                        <h6 className="h6">5318516</h6>
+                        <h6 className="h6">{product.PubChemCID}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -171,7 +181,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           MDL Number
                         </p>
-                        <h6 className="h6">MFCD01735995</h6>
+                        <h6 className="h6">{product.MDLNumber}</h6>
                       </div>
                     </div>
                     <div className="col-md-6">
@@ -179,7 +189,7 @@ const ProductDetail = () => {
                         <p className="text-uppercase font-bold position-relative">
                           Inventory Status
                         </p>
-                        <h6 className="h6">Available in milligrams</h6>
+                        <h6 className="h6">{product.InventoryStatus}</h6>
                       </div>
                     </div>
                   </div>
@@ -285,8 +295,8 @@ const ProductDetail = () => {
                         <input
                           type="text"
                           className="form-control"
-                          placeholder={pageTitle}
-                          value={pageTitle}
+                          placeholder={product.Product}
+                          value={product.Product}
                         />
                       </div>
                     </div>
