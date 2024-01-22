@@ -256,7 +256,7 @@ const phytochemicals = [
       },
       {
         "id": 13,
-        "Image": "/products/product04.png",
+        "Image": "/products/Aloe-emodin-481-72-1.jpg",
         "Product": "Aloe emodin",
         "BotanicalSource": "Aloe barbadensis",
         "IUPACName": "1,8-dihydroxy-3-(hydroxymethyl)-9,10-anthracenedione",
@@ -277,7 +277,7 @@ const phytochemicals = [
       },
       {
         "id": 14,
-        "Image": "/products/product04.png",
+        "Image": "/products/Alantolactone-546-43-0.jpg",
         "Product": "Alantolactone",
         "BotanicalSource": "Inula racemosa",
         "IUPACName": "(3aR,5S,8aR,9aR)-3a,5,6,7,8,8a,9,9a-Octahydro-5,8a-dimethyl-3-methylene-naphtho[2,3-b]furan-2(3H)-one",
@@ -298,7 +298,7 @@ const phytochemicals = [
       },
       {
         "id": 15,
-        "Image": "/products/product04.png",
+        "Image": "/products/Andrographolide-5508-58-7.jpg",
         "Product": "Andrographolide",
         "BotanicalSource": "Andrographis paniculata",
         "IUPACName": "(3E,4S)-3-[2-[(1R,4aS,5R,6R,8aS)-Decahydro-6-hydroxy-5-(hydroxymethyl)-5,8a-dimethyl-2-methylene-1-naphthalenyl]ethylidene]dihydro-4-hydroxy-2(3H)-furanone",
@@ -319,7 +319,7 @@ const phytochemicals = [
       },
       {
         "id": 16,
-        "Image": "/products/product04.png",
+        "Image": "/products/Angelicin-523-50-2.jpg",
         "Product": "Angelicin (Isopsoralen)",
         "BotanicalSource": "Psoralea corylifolia",
         "IUPACName": "furo[2,3-h]chromen-2-one",
@@ -340,7 +340,7 @@ const phytochemicals = [
       },
       {
         "id": 17,
-        "Image": "/products/product04.png",
+        "Image": "/products/Asiatic-acid-464-92-6.jpg",
         "Product": "Asiatic acid",
         "BotanicalSource": "Centella asiatica",
         "IUPACName": "(4α)-2α,3β,23-trihydroxy-urs-12-en-28-oic acid",
@@ -361,7 +361,7 @@ const phytochemicals = [
       },
       {
         "id": 18,
-        "Image": "/products/product04.png",
+        "Image": "/products/Asiaticoside-16830-15-2.jpg",
         "Product": "Asiaticoside",
         "BotanicalSource": "Centella asiatica",
         "IUPACName": "2α,3β,23-trihydroxy-urs-12-en-28-oic acid, O-6-deoxy-α-L-mannopyranosyl-(1→4α)-O-β-D-glucopyranosyl-(1→6)-β-D-glucopyranosyl ester",
@@ -382,7 +382,7 @@ const phytochemicals = [
       },
       {
         "id": 19,
-        "Image": "/products/product04.png",
+        "Image": "/products/Azadiradione-26241-51-0.jpg",
         "Product": "Azadiradione",
         "BotanicalSource": "Azadirachta indica",
         "IUPACName": "[(5R,7R,8R,9R,10R,13S,17R)-17-(furan-3-yl)-4,4,8,10,13-pentamethyl-3,16-dioxo-6,7,9,11,12,17-hexahydro-5H-cyclopenta[a]phenanthren-7-yl] acetate",
@@ -403,7 +403,7 @@ const phytochemicals = [
       },
       {
         "id": 20,
-        "Image": "/products/product04.png",
+        "Image": "/products/Azadirone-25279-67-8.jpg",
         "Product": "Azadirone",
         "BotanicalSource": "Azadirachta indica",
         "IUPACName": "(5alpha,7alpha,13alpha,17alpha)-17-(furan-3-yl)-4,4,8-trimethyl-3-oxoandrosta-1,14-dien-7-yl acetate",
@@ -425,7 +425,7 @@ const phytochemicals = [
     
   {
     "id": 21,
-    "Image": "/products/product04.png",
+    "Image": "/products/Bakuchiol-10309-37-2.jpg",
     "Product": "Bakuchiol",
     "BotanicalSource": "Psoralea corylifolia",
     "IUPACName": "4-[(1E,3S)-3-Ethenyl-3,7-dimethyl-1,6-octadien-1-yl]-phenol",
@@ -446,7 +446,7 @@ const phytochemicals = [
   },
   {
     "id": 22,
-    "Image": "/products/product04.png",
+    "Image": "/products/Bisdemethoxycurcumin-24939-16-0.jpg",
     "Product": "Bisdemethoxycurcumin",
     "BotanicalSource": "Curcuma longa",
     "IUPACName": "1,7-Bis(4-hydroxyphenyl)-1,6-heptadiene-3,5-dione",
@@ -467,7 +467,7 @@ const phytochemicals = [
   },
   {
     "id": 23,
-    "Image": "/products/product04.png",
+    "Image": "/products/Camptothecine-7689-03-4.jpg",
     "Product": "Camptothecine",
     "BotanicalSource": "Mappia foetida",
     "IUPACName": "(4S)-4-ethyl-4-hydroxy-1H-pyrano[3',4':6,7]indolizino[1,2-b]quinoline-3,14(4H,12H)-dione",
@@ -488,7 +488,7 @@ const phytochemicals = [
   },
   {
     "id": 24,
-    "Image": "/products/product04.png",
+    "Image": "/products/Conessine-546-06-5.jpg",
     "Product": "Conessine",
     "BotanicalSource": "Holarrhena antidysenterica",
     "IUPACName": "(3β)-N,N-dimethyl-con-5-enin-3-amine",
@@ -509,7 +509,7 @@ const phytochemicals = [
   },
   {
     "id": 25,
-    "Image": "/products/product04.png",
+    "Image": "/products/Curcumin-458-37-7.jpg",
     "Product": "Curcumin",
     "BotanicalSource": "Curcuma longa",
     "IUPACName": "(E,E)-1,7-bis(4-Hydroxy-3-methoxyphenyl)-1,6-heptadiene-3,5-dione",
@@ -530,7 +530,7 @@ const phytochemicals = [
   },
   {
     "id": 26,
-    "Image": "/products/product04.png",
+    "Image": "/products/Demethoxycurcumin-22608-11-3.jpg",
     "Product": "Demethoxycurcumin",
     "BotanicalSource": "Curcuma longa",
     "IUPACName": "(E,E)-1-(4-Hydroxy-3-methoxyphenyl)-7-(4-hydroxyphenyl)-1,6-heptadiene-3,5-dione",
@@ -551,7 +551,7 @@ const phytochemicals = [
   },
   {
     "id": 27,
-    "Image": "/products/product04.png",
+    "Image": "/products/Demethylwedelolactone-6468-55-9.jpg",
     "Product": "Demethylwedelolactone",
     "BotanicalSource": "Eclipta alba",
     "IUPACName": "1,3,8,9-Tetrahydroxy-6H-benzofuro[3,2-c][1]benzopyran-6-one",
@@ -572,7 +572,7 @@ const phytochemicals = [
   },
   {
     "id": 28,
-    "Image": "/products/product04.png",
+    "Image": "/products/Epoxyazadiradione-18385-59-6.jpg",
     "Product": "Epoxyazadiradione",
     "BotanicalSource": "Azadirachta indica",
     "IUPACName": "[(1S,2R,4S,6S,7S,10R,11R,16R,18R)-6-(furan-3-yl)-1,7,11,15,15-pentamethyl-5,14-dioxo-3-oxapentacyclo[8.8.0.02,4.02,7.011,16]octadec-12-en-18-yl] acetate",
@@ -593,7 +593,7 @@ const phytochemicals = [
   },
   {
     "id": 29,
-    "Image": "/products/product04.png",
+    "Image": "/products/Forskolin-66575-29-9.jpg",
     "Product": "Forskolin",
     "BotanicalSource": "Coleus forskohlii",
     "IUPACName": "7β-Acetoxy-8,13-epoxy-1α,6β,9α-trihydroxylabd-14-en-11-one",
@@ -614,7 +614,7 @@ const phytochemicals = [
   },
   {
     "id": 30,
-    "Image": "/products/product04.png",
+    "Image": "/products/Gedunin-2753-30-2.jpg",
     "Product": "Gedunin",
     "BotanicalSource": "Azadirachta indica",
     "IUPACName": "(1S,3aS,4aR,4bS,5R,6aR,10aR,10bR,12aS)-5-(acetyloxy)-1-(3-furanyl)-1,5,6,6a,7,10a,10b,11,12,12a-decahydro-4b,7,7,10a,12a-pentamethyl-oxireno[c]phenanthro[1,2-d]pyran-3,8(3aH,4bH)-dione",
@@ -635,7 +635,7 @@ const phytochemicals = [
   },
   {
     "id": 31,
-    "Image": "/products/product04.png",
+    "Image": "/products/Guggulsterone-E-39025-24-6.jpg",
     "Product": "Guggulsterone-E",
     "BotanicalSource": "Commiphora mukul",
     "IUPACName": "(17E)-Pregna-4,17(20)-diene-3,16-dione",
@@ -656,7 +656,7 @@ const phytochemicals = [
   },
   {
     "id": 32,
-    "Image": "/products/product04.png",
+    "Image": "/products/Guggulsterone-Z-39025-23-5.jpg",
     "Product": "Guggulsterone-Z",
     "BotanicalSource": "Commiphora mukul",
     "IUPACName": "(17Z)-Pregna-4,17(20)-diene-3,16-dione",
@@ -677,7 +677,7 @@ const phytochemicals = [
   },
   {
     "id": 33,
-    "Image": "/products/product04.png",
+    "Image": "/products/Hypophyllanthin-33676-00-5.jpg",
     "Product": "Hypophyllanthin",
     "BotanicalSource": "Phyllanthus amarus",
     "IUPACName": "(7S,8S,9R)-9-(3,4-dimethoxyphenyl)-6,7,8,9-tetrahydro-4-methoxy-7,8-bis(methoxymethyl)-naphtho[1,2-d]-1,3-dioxole",
@@ -698,7 +698,7 @@ const phytochemicals = [
   },
   {
     "id": 34,
-    "Image": "/products/product04.png",
+    "Image": "/products/Isoalantolactone-470-17-7.jpg",
     "Product": "Isoalantolactone",
     "BotanicalSource": "Inula racemosa",
     "IUPACName": "(3aR,4aS,8aR,9aR)-decahydro-8a-methyl-3,5-bis(methylene)-naphtho[2,3-b]furan-2(3H)-one",
@@ -719,7 +719,7 @@ const phytochemicals = [
   },
   {
     "id": 35,
-    "Image": "/products/product04.png",
+    "Image": "/products/Isoandrographolide-0.jpg",
     "Product": "Isoandrographolide",
     "BotanicalSource": "Andrographis paniculata",
     "IUPACName": "3-[(3aR,5aS,6R,7R,9aR,9bS)-7-hydroxy-6-(hydroxymethyl)-3a,6,9a-trimethyl-dodecahydronaphtho[2,1-b]furan-2-yl]-2,5-dihydrofuran-2-one",
@@ -740,7 +740,7 @@ const phytochemicals = [
   },
   {
     "id": 36,
-    "Image": "/products/product04.png",
+    "Image": "/products/Lupeol-545-47-1.jpg",
     "Product": "Lupeol",
     "BotanicalSource": "Crataeva nurvala",
     "IUPACName": "20(29)-Lupen-3β-ol, 3β-Hydroxy-20(29)-lupene, Fagarasterol",
@@ -761,7 +761,7 @@ const phytochemicals = [
   },
   {
     "id": 37,
-    "Image": "/products/product04.png",
+    "Image": "/products/Lysergol-602-85-7.jpg",
     "Product": "Lysergol",
     "BotanicalSource": "Ipomoea hederacea",
     "IUPACName": "9,10-didehydro-6-methyl-ergoline-8β-methanol",
@@ -782,7 +782,7 @@ const phytochemicals = [
   },
   {
     "id": 38,
-    "Image": "/products/product04.png",
+    "Image": "/products/Madecassicacid-18449-41-7.jpg",
     "Product": "Madecassic acid",
     "BotanicalSource": "Centella asiatica",
     "IUPACName": "(2α,3β,4α,6β)-2,3,6,23-tetrahydroxy-urs-12-en-28-oic acid",
@@ -803,7 +803,7 @@ const phytochemicals = [
   },
   {
     "id": 39,
-    "Image": "/products/product04.png",
+    "Image": "/products/Madecassoside-34540-22-2.jpg",
     "Product": "Madecassoside",
     "BotanicalSource": "Centella asiatica",
     "IUPACName": "(2α,3β,4α,6β)-2,3,6,23-tetrahydroxy-urs-12-en-28-oic acid-O-6-deoxy-α-L-mannopyranosyl-(1→4)-O-β-D-glucopyranosyl-(1→6)-β-D-glucopyranosyl ester",
@@ -824,7 +824,7 @@ const phytochemicals = [
   },
   {
     "id": 40,
-    "Image": "/products/product04.png",
+    "Image": "/products/MuristeroneA-38778-30-2.jpg",
     "Product": "Muristerone A",
     "BotanicalSource": "Ipomoea hederacea",
     "IUPACName": "2β,3β,5β,11α,14,20,22R-heptahydroxy-cholest-7-en-6-one",
@@ -845,7 +845,7 @@ const phytochemicals = [
   },
   {
     "id": 41,
-    "Image": "/products/product04.png",
+    "Image": "/products/Neoandrographolide-27215-14-1.jpg",
     "Product": "Neoandrographolide",
     "BotanicalSource": "Andrographis paniculata",
     "IUPACName": "ent-19-Hydroxy-8(17),13-labdadien-16,15-olide 19-O-β-D-glucopyranoside",
@@ -866,7 +866,7 @@ const phytochemicals = [
   },
   {
     "id": 42,
-    "Image": "/products/product04.png",
+    "Image": "/products/Nimbolide-25990-37-8.jpg",
     "Product": "Nimbolide",
     "BotanicalSource": "Azadirachta indica",
     "IUPACName": "(4α,5α,6α,7α,15β,17α)-7,15:21,23-Diepoxy-6-hydroxy-4,8-dimethyl-1-oxo-18,24-dinor-11,12-secochola-2,13,20,22-tetraene-4,11-dicarboxylic Αcid γ-lactone Methyl Ester",
@@ -887,7 +887,7 @@ const phytochemicals = [
   },
   {
     "id": 43,
-    "Image": "/products/product04.png",
+    "Image": "/products/Niranthin-50656-77-4.jpg",
     "Product": "Niranthin",
     "BotanicalSource": "Phyllanthus amarus",
     "IUPACName": "6-[(2R,3R)-3-[(3,4-dimethoxyphenyl)methyl]-4-methoxy-2-(methoxymethyl)butyl]-4-methoxy-1,3-benzodioxole",
@@ -908,7 +908,7 @@ const phytochemicals = [
   },
   {
     "id": 44,
-    "Image": "/products/product04.png",
+    "Image": "/products/Phyllanthin-10351-88-9.jpg",
     "Product": "Phyllanthin",
     "BotanicalSource": "Phyllanthus amarus",
     "IUPACName": "1,1’-[(2S,3S)-2,3-bis(methoxymethyl)-1,4-butanediyl]bis[3,4-dimethoxy-benzene",
@@ -929,7 +929,7 @@ const phytochemicals = [
   },
   {
     "id": 45,
-    "Image": "/products/product04.png",
+    "Image": "/products/Piperin-94-62-2.jpg",
     "Product": "Piperin",
     "BotanicalSource": "Piper nigrum",
     "IUPACName": "(2E,4E)-5-(1,3-benzodioxol-5-yl)-1-(1-piperidinyl)-2,4-pentadien-1-one",
@@ -950,7 +950,7 @@ const phytochemicals = [
   },
   {
     "id": 46,
-    "Image": "/products/product04.png",
+    "Image": "/products/Piperlongumine-20069-09-4.jpg",
     "Product": "Piperlongumine",
     "BotanicalSource": "Piper longum",
     "IUPACName": "5,6-dihydro-1-[(2E)-1-oxo-3-(3,4,5-trimethoxyphenyl)-2-propen-1-yl]-2(1H)-pyridinone",
@@ -971,7 +971,7 @@ const phytochemicals = [
   },
   {
     "id": 47,
-    "Image": "/products/product04.png",
+    "Image": "/products/Piperlonguminine-5950-12-9.jpg",
     "Product": "Piperlonguminine",
     "BotanicalSource": "Piper longum",
     "IUPACName": "(2E,4E)-5-(1,3-benzodioxol-5-yl)-N-(2-methylpropyl)penta-2,4-dienamide",
@@ -992,7 +992,7 @@ const phytochemicals = [
   },
   {
     "id": 48,
-    "Image": "/products/product04.png",
+    "Image": "/products/Psoralen-66-97-7.jpg",
     "Product": "Psoralen",
     "BotanicalSource": "Psoralea corylifolia",
     "IUPACName": "7H-furo[3,2-g][1]benzopyran-7-one",
@@ -1013,7 +1013,7 @@ const phytochemicals = [
   },
   {
     "id": 49,
-    "Image": "/products/product04.png",
+    "Image": "/products/Pterostilbene-537-42-8.jpg",
     "Product": "Pterostilbene",
     "BotanicalSource": "Pterocarpus marsupium",
     "IUPACName": "4-[(1E)-2-(3,5-dimethoxyphenyl)ethenyl]-phenol",
@@ -1034,7 +1034,7 @@ const phytochemicals = [
   },
   {
     "id": 50,
-    "Image": "/products/product04.png",
+    "Image": "/products/Rhein-478-43-3.jpg",
     "Product": "Rhein",
     "BotanicalSource": "Aloe barbadensis",
     "IUPACName": "9,10-dihydro-4,5-dihydroxy-9,10-dioxo-2-anthracenecarboxylic acid",
@@ -1055,7 +1055,7 @@ const phytochemicals = [
   },
   {
     "id": 51,
-    "Image": "/products/product04.png",
+    "Image": "/products/Rubiadin-117-02-2.jpg",
     "Product": "Rubiadin",
     "BotanicalSource": "Rubia cordifolia",
     "IUPACName": "1,3-dihydroxy-2-methyl-9,10-anthracenedione",
@@ -1076,7 +1076,7 @@ const phytochemicals = [
   },
   {
     "id": 52,
-    "Image": "/products/product04.png",
+    "Image": "/products/Sesamin-0607-80-7.jpg",
     "Product": "Sesamin",
     "BotanicalSource": "Sesamum indicum",
     "IUPACName": "[1S-(1α,3aα,4α,6aα)]-5,5'-(tetrahydro-1H,3H-furo[3,4-c]furan-1,4-diyl)bis-1,3-benzodioxole",
@@ -1097,7 +1097,7 @@ const phytochemicals = [
   },
   {
     "id": 53,
-    "Image": "/products/product04.png",
+    "Image": "/products/Tetrahydrocurcumin-36062-04-1.jpg",
     "Product": "Tetrahydrocurcumin",
     "BotanicalSource": "Curcuma longa",
     "IUPACName": "1,7-bis(4-hydroxy-3-methoxyphenyl)-3,5-heptanedione",
@@ -1118,7 +1118,7 @@ const phytochemicals = [
   },
   {
     "id": 54,
-    "Image": "/products/product04.png",
+    "Image": "/products/Tetrahydropiperin-23434-88-0.jpg",
     "Product": "Tetrahydropiperin",
     "BotanicalSource": "Piper nigrum",
     "IUPACName": "5-(1,3-benzodioxol-5-yl)-1-(1-piperidinyl)-1-pentanone",
@@ -1139,7 +1139,7 @@ const phytochemicals = [
   },
   {
     "id": 55,
-    "Image": "/products/product04.png",
+    "Image": "/products/Vasicine-6159-55-3.jpg",
     "Product": "Vasicine",
     "BotanicalSource": "Adhatoda vasica",
     "IUPACName": "(3S)-1,2,3,9-Tetrahydropyrrolo[2,1-b]quinazolin-3-ol",
@@ -1160,7 +1160,7 @@ const phytochemicals = [
   },
   {
     "id": 56,
-    "Image": "/products/product04.png",
+    "Image": "/products/Vasicinone-486-64-6.jpg",
     "Product": "Vasicinone",
     "BotanicalSource": "Adhatoda vasica",
     "IUPACName": "(3S)-2,3-Dihydro-3-hydroxypyrrolo[2,1-b]quinazolin-9(1H)-one",
@@ -1181,7 +1181,7 @@ const phytochemicals = [
   },
   {
     "id": 57,
-    "Image": "/products/product04.png",
+    "Image": "/products/WithaferinA-5119-48-2.jpg",
     "Product": "Withaferin A",
     "BotanicalSource": "Withania somnifera",
     "IUPACName": "4β,5β,6β,22R)-5,6-Epoxy-4,22,27-trihydroxy-1-oxo-ergosta-2,24-dien-26-oic acid δ-lactone",
@@ -1202,6 +1202,7 @@ const phytochemicals = [
   },
   {
     "id": 58,
+    "Image": "/products/WithanolideA-32911-62-9.jpg",
     "Product": "Withanolide A",
     "BotanicalSource": "Withania somnifera",
     "IUPACName": "(5α,6α,7α,22R)-6,7-epoxy-5,20,22-trihydroxy-1-oxo-ergosta-2,24-dien-26-oic Acid δ-Lactone",
@@ -1222,6 +1223,7 @@ const phytochemicals = [
   }, 
   {
     "id": 59,
+    "Image": "/products/WithanolideB-56973-41-2.jpg",
     "Product": "Withanolide B",
     "BotanicalSource": "Withania somnifera",
     "IUPACName": "6α,7α-epoxy-5α,22R-dihydroxy-1-oxo-ergosta-2,24-dien-26-oic acid, δ-lactone",
@@ -1242,6 +1244,7 @@ const phytochemicals = [
   },
   {
     "id": 60,
+    "Image": "/products/Withanone-27570-38-3.jpg",
     "Product": "Withanone",
     "BotanicalSource": "Withania somnifera",
     "IUPACName": "(22R)-6α,7α-Epoxy-5,17,22-trihydroxy-1-oxo-5α-ergosta-2,24-dien-26-oic acid δ-lactone",
