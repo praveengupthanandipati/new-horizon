@@ -93,18 +93,14 @@ function Products() {
                   tabindex="0"
                 >
                   <div className="row">
-                    <div className="col-md-6"></div>
-
                     <div className="col-md-6">
-                      <div className="text-end">
-                        <NavLink
-                          className="btn border font-secondary"
-                          to={PhytochemicalsPdf}
-                          target="_blank"
-                        >
-                          List of Phytochemicals with structure activities
-                        </NavLink>
-                      </div>
+                      <NavLink
+                        className="green-btn"
+                        to={PhytochemicalsPdf}
+                        target="_blank"
+                      >
+                        List of Phytochemicals with structure activities
+                      </NavLink>
                     </div>
                   </div>
 
@@ -147,9 +143,6 @@ function Products() {
                         <tr>
                           <th scope="col">Chemical Name</th>
                           <th scope="col">CAS Number</th>
-                          <th scope="col">Technical Note</th>
-                          <th scope="col">COA & Spectrual data</th>
-                          <th scope="col">Analogs</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -157,9 +150,6 @@ function Products() {
                           <td>
                             <NavLink to="">Pellitorine</NavLink>
                           </td>
-                          <td width="15%">18836-52-7</td>
-                          <td width="15%">18836-52-7</td>
-                          <td width="15%">18836-52-7</td>
                           <td width="15%">18836-52-7</td>
                         </tr>
                       </tbody>
@@ -181,9 +171,6 @@ function Products() {
                         <tr>
                           <th scope="col">Chemical Name</th>
                           <th scope="col">CAS Number</th>
-                          <th scope="col">Technical Note</th>
-                          <th scope="col">COA & Spectrual data</th>
-                          <th scope="col">Analogs</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -191,9 +178,6 @@ function Products() {
                           <td>
                             <NavLink to="">Pellitorine</NavLink>
                           </td>
-                          <td width="15%">18836-52-7</td>
-                          <td width="15%">18836-52-7</td>
-                          <td width="15%">18836-52-7</td>
                           <td width="15%">18836-52-7</td>
                         </tr>
                       </tbody>
