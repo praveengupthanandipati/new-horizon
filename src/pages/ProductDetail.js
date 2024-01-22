@@ -19,22 +19,22 @@ const ProductDetail = () => {
 
   if (!product) {
     return <div>Product not found</div>;
+  }
+
+  const getMessageForKey = (key) => {
+    if (phytochemicals[key] === null) {
+      return `The value for ${key} is null`;
+    } else {
+      return `The value  for ${key} is not null`;
+    }
   };
 
-const getMessageForKey=(key)=>{
-  if (phytochemicals[key]===null){
-    return `The value for ${key} is null`;
-  } else {
-    return `The value  for ${key} is not null`;
-  }
-}
-
-//render message for each key
-const renderMessages = ()=>{
-  return Object.keys(phytochemicals).map((key)=>(
-    <p key={key}>{getMessageForKey} </p>
-  ));
-};  
+  //render message for each key
+  const renderMessages = () => {
+    return Object.keys(phytochemicals).map((key) => (
+      <p key={key}>{getMessageForKey} </p>
+    ));
+  };
 
   return (
     <div>
@@ -75,141 +75,241 @@ const renderMessages = ()=>{
                     <img src={product.Image} className="img-fluid" />
                   </figure>
                 </div>
-                <div className="col-md-9">                
-                  <div className="row pt-2">
-                    <div className="col-md-6">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          Botanical Source
-                        </p>
-                        <h6 className="h6">{product.BotanicalSource}</h6>
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          IUPAC Name
-                        </p>
-                        <h6 className="h6">{product.IUPACName}</h6>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          Synonyms
-                        </p>
-                        <h6 className="h6">{product.Synonyms}</h6>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          CAS Number
-                        </p>
-                        <h6 className="h6">
-                          <strong>{product.CASNumber}</strong>
-                        </h6>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          Molecular Formula
-                        </p>
-                        <h6 className="h6">{product.MolecularFormula}</h6>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          Molecular weight
-                        </p>
-                        <h6 className="h6">{product.MolecularWeight}</h6>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          Appearance
-                        </p>
-                        <h6 className="h6">{product.Appearance}</h6>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          Purity
-                        </p>
-                        <h6 className="h6">{product.Purity}</h6>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          HRMS(ESI)
-                        </p>
-                        <h6 className="h6">{product.HRMS_ESI}</h6>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          Specific Rotation [a]D 20
-                        </p>
-                        <h6 className="h6">{product.SpecificRotation_aD20}</h6>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          InChI Key
-                        </p>
-                        <h6 className="h6">{product.InChIKey}</h6>
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          SMILES
-                        </p>
-                        <h6 className="h6">{product.SMILES}</h6>
-                      </div>
-                    </div>
-                   
-                    <div className="col-md-12">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          InChI Code
-                        </p>
-                        <h6 className="h6">{product.InChICode}</h6>
-                      </div>
-                    </div>
+                <div className="col-md-9">
+                  {/* Tab Starts */}
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="pills-Description-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-Description"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-Description"
+                        aria-selected="true"
+                      >
+                        Product Description
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-TechnicalNote-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-TechnicalNote"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-TechnicalNote"
+                        aria-selected="false"
+                      >
+                        Technical Note
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-SpectrualData-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-SpectrualData"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-SpectrualData"
+                        aria-selected="false"
+                      >
+                        COA & Spectrual data
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-Analogs-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-Analogs"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-Analogs"
+                        aria-selected="false"
+                      >
+                        Analogs
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="pills-Description"
+                      role="tabpanel"
+                      aria-labelledby="pills-Description-tab"
+                    >
+                      {/* Description starts */}
+                      <div className="row pt-2">
+                        <div className="col-md-6">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              Botanical Source
+                            </p>
+                            <h6 className="h6">{product.BotanicalSource}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              IUPAC Name
+                            </p>
+                            <h6 className="h6">{product.IUPACName}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              Synonyms
+                            </p>
+                            <h6 className="h6">{product.Synonyms}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              CAS Number
+                            </p>
+                            <h6 className="h6">
+                              <strong>{product.CASNumber}</strong>
+                            </h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              Molecular Formula
+                            </p>
+                            <h6 className="h6">{product.MolecularFormula}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              Molecular weight
+                            </p>
+                            <h6 className="h6">{product.MolecularWeight}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              Appearance
+                            </p>
+                            <h6 className="h6">{product.Appearance}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              Purity
+                            </p>
+                            <h6 className="h6">{product.Purity}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              HRMS(ESI)
+                            </p>
+                            <h6 className="h6">{product.HRMS_ESI}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              Specific Rotation [a]D 20
+                            </p>
+                            <h6 className="h6">
+                              {product.SpecificRotation_aD20}
+                            </h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              InChI Key
+                            </p>
+                            <h6 className="h6">{product.InChIKey}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              SMILES
+                            </p>
+                            <h6 className="h6">{product.SMILES}</h6>
+                          </div>
+                        </div>
 
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          PubChem CID
-                        </p>
-                        <h6 className="h6">{product.PubChemCID}</h6>
+                        <div className="col-md-12">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              InChI Code
+                            </p>
+                            <h6 className="h6">{product.InChICode}</h6>
+                          </div>
+                        </div>
+
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              PubChem CID
+                            </p>
+                            <h6 className="h6">{product.PubChemCID}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              MDL Number
+                            </p>
+                            <h6 className="h6">{product.MDLNumber}</h6>
+                          </div>
+                        </div>
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              Inventory Status
+                            </p>
+                            <h6 className="h6">{product.InventoryStatus}</h6>
+                          </div>
+                        </div>
                       </div>
+                      {/* Description ends */}
                     </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          MDL Number
-                        </p>
-                        <h6 className="h6">{product.MDLNumber}</h6>
-                      </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-TechnicalNote"
+                      role="tabpanel"
+                      aria-labelledby="pills-TechnicalNote-tab"
+                    >
+                      Technical Note Not Available Currently, We will get back
+                      soon
                     </div>
-                    <div className="col-md-4">
-                      <div className="product-desc-item">
-                        <p className="text-uppercase font-bold position-relative">
-                          Inventory Status
-                        </p>
-                        <h6 className="h6">{product.InventoryStatus}</h6>
-                      </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-SpectrualData"
+                      role="tabpanel"
+                      aria-labelledby="pills-SpectrualData-tab"
+                    >
+                      SpectrualData Not Available Currently, We will get back
+                      soon
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-Analogs"
+                      role="tabpanel"
+                      aria-labelledby="pills-Analogs-tab"
+                    >
+                      Analogs Not Available Currently, We will get back soon
                     </div>
                   </div>
+
+                  {/* Tab ends */}
                 </div>
               </div>
               {/*product enquiry form  */}
