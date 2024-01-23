@@ -56,17 +56,17 @@ function Header() {
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/Products" tabindex="-1">
+                    <NavLink className="nav-link" to="/Products">
                       Products
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/Services" tabindex="-1">
+                    <NavLink className="nav-link" to="/Services">
                       Services
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/Contact" tabindex="-1">
+                    <NavLink className="nav-link" to="/Contact">
                       Contact
                     </NavLink>
                   </li>

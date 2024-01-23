@@ -65,26 +65,26 @@ function Footer() {
                   <h5 className="footer-col-title font-bold">Contact</h5>
                   <ul className="contacts">
                     <li>
-                      <span class="icon-phone-call"></span> (406) 555-0120
+                      <span className="icon-phone-call"></span> (406) 555-0120
                     </li>
                     <li>
-                      <span class="icon-email"></span>{" "}
+                      <span className="icon-email"></span>{" "}
                       mangcoding123@newhorizon.com
                     </li>
                     <li>
-                      <span class="icon-pin"></span> IDA Mallapur, Hyderabad,
+                      <span className="icon-pin"></span> IDA Mallapur, Hyderabad,
                       Telangana - 500034
                     </li>
                   </ul>
                   <div className="pt-3 social">
                     <NavLink to="">
-                      <span class="icon-facebook"></span>
+                      <span className="icon-facebook"></span>
                     </NavLink>
                     <NavLink to="">
-                      <span class="icon-linkedin"></span>
+                      <span className="icon-linkedin"></span>
                     </NavLink>
                     <NavLink to="">
-                      <span class="icon-twitter"></span>
+                      <span className="icon-twitter"></span>
                     </NavLink>
                   </div>
                 </div>

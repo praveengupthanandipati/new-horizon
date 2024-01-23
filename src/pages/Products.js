@@ -9,9 +9,15 @@ function Products() {
   const navigate = useNavigate();
 
   const handleClick = (id) => {
-    navigate(`/Product-Detail?q=${id}`);
+    navigate(`/Product-Detail?=${id}`);
   };
-
+  const leadItems = phytochemicals.filter(
+    (item) => item.type === "lead" || item.type === "lead_analogs"
+  );
+  const analogsItems = phytochemicals.filter(
+    (item) => item.type === "analogs" || item.type === "lead_analogs"
+  );
+  // console.log(leadItems);
   return (
     <div>
       <section className="subPage">
@@ -28,11 +34,11 @@ function Products() {
         <div className="subPageMain">
           <div className="container">
             <nav aria-label="breadcrumb">
-              <ol class="breadcrumb my-2">
-                <li class="breadcrumb-item">
+              <ol className="breadcrumb my-2">
+                <li className="breadcrumb-item">
                   <NavLink to="/">Home</NavLink>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   {pageTitle}
                 </li>
               </ol>
@@ -40,8 +46,8 @@ function Products() {
           </div>
           <div className="container">
             <div className="pageContainer">
-              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
+              <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li className="nav-item" role="presentation">
                   <button
                     className="nav-link active"
                     id="pills-Phytochemical-Reference-Standards-tab"
@@ -55,7 +61,7 @@ function Products() {
                     Phytochemical Reference Standards
                   </button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li className="nav-item" role="presentation">
                   <button
                     className="nav-link"
                     id="pills-Lead-Phytochemicals-tab"
@@ -69,7 +75,7 @@ function Products() {
                     Lead Phytochemicals
                   </button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li className="nav-item" role="presentation">
                   <button
                     className="nav-link"
                     id="pills-Synthetic-analogs-of-Lead-tab"
@@ -90,7 +96,6 @@ function Products() {
                   id="pills-Phytochemical-Reference-Standards"
                   role="tabpanel"
                   aria-labelledby="pills-Phytochemical-Reference-Standards-tab"
-                  tabindex="0"
                 >
                   <div className="row">
                     <div className="col-md-6">
@@ -130,11 +135,10 @@ function Products() {
                   {/* table resposive ends*/}
                 </div>
                 <div
-                  class="tab-pane fade"
+                  className="tab-pane fade"
                   id="pills-Lead-Phytochemicals"
                   role="tabpanel"
                   aria-labelledby="pills-Lead-Phytochemicals-tab"
-                  tabindex="0"
                 >
                   {/* table responsive starts here */}
                   <div className="table-responsive">
@@ -146,23 +150,26 @@ function Products() {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>
-                            <NavLink to="">Pellitorine</NavLink>
-                          </td>
-                          <td width="15%">18836-52-7</td>
-                        </tr>
+                        {leadItems.map((item, index) => (
+                          <tr key={index}>
+                            <td width="85%">
+                              <a href="" onClick={() => handleClick(item.id)}>
+                                {item.Product}
+                              </a>
+                            </td>
+                            <td width="15%">{item.CASNumber}</td>
+                          </tr>
+                        ))}
                       </tbody>
                     </table>
                   </div>
                   {/* table resposive ends*/}
                 </div>
                 <div
-                  class="tab-pane fade"
+                  className="tab-pane fade"
                   id="pills-Synthetic-analogs-of-Lead"
                   role="tabpanel"
                   aria-labelledby="pills-Synthetic-analogs-of-Lead-tab"
-                  tabindex="0"
                 >
                   {/* table responsive starts here */}
                   <div className="table-responsive">
@@ -174,12 +181,16 @@ function Products() {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>
-                            <NavLink to="">Pellitorine</NavLink>
-                          </td>
-                          <td width="15%">18836-52-7</td>
-                        </tr>
+                        {analogsItems.map((item, index) => (
+                          <tr key={index}>
+                            <td width="85%">
+                              <a href="" onClick={() => handleClick(item.id)}>
+                                {item.Product}
+                              </a>
+                            </td>
+                            <td width="15%">{item.CASNumber}</td>
+                          </tr>
+                        ))}
                       </tbody>
                     </table>
                   </div>

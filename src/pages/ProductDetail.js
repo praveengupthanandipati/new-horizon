@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
   const id = queryParams.get("q");
-  //   console.log(id);
+    console.log(id);
   const [product, setProduct] = useState(null);
   useEffect(() => {
     const foundProduct = phytochemicals.find(
@@ -21,20 +21,20 @@ const ProductDetail = () => {
     return <div>Product not found</div>;
   }
 
-  const getMessageForKey = (key) => {
-    if (phytochemicals[key] === null) {
-      return `The value for ${key} is null`;
-    } else {
-      return `The value  for ${key} is not null`;
-    }
-  };
+  // const getMessageForKey = (key) => {
+  //   if (phytochemicals[key] === null) {
+  //     return `The value for ${key} is null`;
+  //   } else {
+  //     return `The value  for ${key} is not null`;
+  //   }
+  // };
 
-  //render message for each key
-  const renderMessages = () => {
-    return Object.keys(phytochemicals).map((key) => (
-      <p key={key}>{getMessageForKey} </p>
-    ));
-  };
+  // //render message for each key
+  // const renderMessages = () => {
+  //   return Object.keys(phytochemicals).map((key) => (
+  //     <p key={key}>{getMessageForKey} </p>
+  //   ));
+  // };
 
   return (
     <div>
@@ -54,14 +54,14 @@ const ProductDetail = () => {
         <div className="subPageMain">
           <div className="container">
             <nav aria-label="breadcrumb">
-              <ol class="breadcrumb my-2">
-                <li class="breadcrumb-item">
+              <ol className="breadcrumb my-2">
+                <li className="breadcrumb-item">
                   <NavLink to="/">Home</NavLink>
                 </li>
-                <li class="breadcrumb-item" aria-current="page">
+                <li className="breadcrumb-item" aria-current="page">
                   <NavLink to="/Products">Products</NavLink>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   {product.Product}
                 </li>
               </ol>
@@ -77,10 +77,10 @@ const ProductDetail = () => {
                 </div>
                 <div className="col-md-9">
                   {/* Tab Starts */}
-                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
+                  <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li className="nav-item" role="presentation">
                       <button
-                        class="nav-link active"
+                        className="nav-link active"
                         id="pills-Description-tab"
                         data-bs-toggle="pill"
                         data-bs-target="#pills-Description"
@@ -92,9 +92,9 @@ const ProductDetail = () => {
                         Product Description
                       </button>
                     </li>
-                    <li class="nav-item" role="presentation">
+                    <li className="nav-item" role="presentation">
                       <button
-                        class="nav-link"
+                        className="nav-link"
                         id="pills-TechnicalNote-tab"
                         data-bs-toggle="pill"
                         data-bs-target="#pills-TechnicalNote"
@@ -106,9 +106,9 @@ const ProductDetail = () => {
                         Technical Note
                       </button>
                     </li>
-                    <li class="nav-item" role="presentation">
+                    <li className="nav-item" role="presentation">
                       <button
-                        class="nav-link"
+                        className="nav-link"
                         id="pills-SpectrualData-tab"
                         data-bs-toggle="pill"
                         data-bs-target="#pills-SpectrualData"
@@ -120,9 +120,9 @@ const ProductDetail = () => {
                         COA & Spectrual data
                       </button>
                     </li>
-                    <li class="nav-item" role="presentation">
+                    <li className="nav-item" role="presentation">
                       <button
-                        class="nav-link"
+                        className="nav-link"
                         id="pills-Analogs-tab"
                         data-bs-toggle="pill"
                         data-bs-target="#pills-Analogs"
@@ -135,9 +135,9 @@ const ProductDetail = () => {
                       </button>
                     </li>
                   </ul>
-                  <div class="tab-content" id="pills-tabContent">
+                  <div className="tab-content" id="pills-tabContent">
                     <div
-                      class="tab-pane fade show active"
+                      className="tab-pane fade show active"
                       id="pills-Description"
                       role="tabpanel"
                       aria-labelledby="pills-Description-tab"
@@ -149,7 +149,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Botanical Source
                             </p>
-                            <h6 className="h6">{product.BotanicalSource}</h6>
+                            <h6 className="h6">{product?.BotanicalSource || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-12">
@@ -157,7 +157,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               IUPAC Name
                             </p>
-                            <h6 className="h6">{product.IUPACName}</h6>
+                            <h6 className="h6">{product?.IUPACName || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -165,7 +165,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Synonyms
                             </p>
-                            <h6 className="h6">{product.Synonyms}</h6>
+                            <h6 className="h6">{product?.Synonyms || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -174,7 +174,7 @@ const ProductDetail = () => {
                               CAS Number
                             </p>
                             <h6 className="h6">
-                              <strong>{product.CASNumber}</strong>
+                              <strong>{product?.CASNumber || "No Data Found"}</strong>
                             </h6>
                           </div>
                         </div>
@@ -183,7 +183,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Molecular Formula
                             </p>
-                            <h6 className="h6">{product.MolecularFormula}</h6>
+                            <h6 className="h6">{product?.MolecularFormula || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -191,7 +191,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Molecular weight
                             </p>
-                            <h6 className="h6">{product.MolecularWeight}</h6>
+                            <h6 className="h6">{product?.MolecularWeight || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -199,7 +199,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Appearance
                             </p>
-                            <h6 className="h6">{product.Appearance}</h6>
+                            <h6 className="h6">{product?.Appearance || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -207,7 +207,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Purity
                             </p>
-                            <h6 className="h6">{product.Purity}</h6>
+                            <h6 className="h6">{product?.Purity || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -215,7 +215,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               HRMS(ESI)
                             </p>
-                            <h6 className="h6">{product.HRMS_ESI}</h6>
+                            <h6 className="h6">{product?.HRMS_ESI || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -224,7 +224,7 @@ const ProductDetail = () => {
                               Specific Rotation [a]D 20
                             </p>
                             <h6 className="h6">
-                              {product.SpecificRotation_aD20}
+                              {product?.SpecificRotation_aD20 || "No Data Found"}
                             </h6>
                           </div>
                         </div>
@@ -233,7 +233,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               InChI Key
                             </p>
-                            <h6 className="h6">{product.InChIKey}</h6>
+                            <h6 className="h6">{product?.InChIKey || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-12">
@@ -241,7 +241,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               SMILES
                             </p>
-                            <h6 className="h6">{product.SMILES}</h6>
+                            <h6 className="h6">{product?.SMILES || "No Data Found"}</h6>
                           </div>
                         </div>
 
@@ -250,7 +250,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               InChI Code
                             </p>
-                            <h6 className="h6">{product.InChICode}</h6>
+                            <h6 className="h6">{product?.InChICode || "No Data Found"}</h6>
                           </div>
                         </div>
 
@@ -259,7 +259,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               PubChem CID
                             </p>
-                            <h6 className="h6">{product.PubChemCID}</h6>
+                            <h6 className="h6">{product?.PubChemCID || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -267,7 +267,7 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               MDL Number
                             </p>
-                            <h6 className="h6">{product.MDLNumber}</h6>
+                            <h6 className="h6">{product?.MDLNumber || "No Data Found"}</h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -275,14 +275,14 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Inventory Status
                             </p>
-                            <h6 className="h6">{product.InventoryStatus}</h6>
+                            <h6 className="h6">{product?.InventoryStatus || "No Data Found"}</h6>
                           </div>
                         </div>
                       </div>
                       {/* Description ends */}
                     </div>
                     <div
-                      class="tab-pane fade"
+                      className="tab-pane fade"
                       id="pills-TechnicalNote"
                       role="tabpanel"
                       aria-labelledby="pills-TechnicalNote-tab"
@@ -291,7 +291,7 @@ const ProductDetail = () => {
                       soon
                     </div>
                     <div
-                      class="tab-pane fade"
+                      className="tab-pane fade"
                       id="pills-SpectrualData"
                       role="tabpanel"
                       aria-labelledby="pills-SpectrualData-tab"
@@ -300,7 +300,7 @@ const ProductDetail = () => {
                       soon
                     </div>
                     <div
-                      class="tab-pane fade"
+                      className="tab-pane fade"
                       id="pills-Analogs"
                       role="tabpanel"
                       aria-labelledby="pills-Analogs-tab"
@@ -337,7 +337,7 @@ const ProductDetail = () => {
                   <div className="row">
                     <div className="col-md-4">
                       <div className="mb-3 form-group">
-                        <label class="form-label">First Name</label>
+                        <label className="form-label">First Name</label>
                         <input
                           type="text"
                           className="form-control"
@@ -347,7 +347,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="col-md-4">
                       <div className="mb-3 form-group">
-                        <label class="form-label">Last Name</label>
+                        <label className="form-label">Last Name</label>
                         <input
                           type="text"
                           className="form-control"
@@ -357,7 +357,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="col-md-4">
                       <div className="mb-3 form-group">
-                        <label class="form-label">Designation</label>
+                        <label className="form-label">Designation</label>
                         <select className="form-select">
                           <option selected>Select Your Designation</option>
                           <option>Employee</option>
@@ -368,7 +368,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="col-md-4">
                       <div className="mb-3 form-group">
-                        <label class="form-label">Phone Number</label>
+                        <label className="form-label">Phone Number</label>
                         <input
                           type="text"
                           className="form-control"
@@ -378,7 +378,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="col-md-4">
                       <div className="mb-3 form-group">
-                        <label class="form-label">Email ID</label>
+                        <label className="form-label">Email ID</label>
                         <input
                           type="email"
                           className="form-control"
@@ -388,7 +388,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="col-md-4">
                       <div className="mb-3 form-group">
-                        <label class="form-label">Company Name</label>
+                        <label className="form-label">Company Name</label>
                         <input
                           type="text"
                           className="form-control"
@@ -398,7 +398,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="col-md-4">
                       <div className="mb-3 form-group">
-                        <label class="form-label">Country Name</label>
+                        <label className="form-label">Country Name</label>
                         <input
                           type="text"
                           className="form-control"
@@ -408,7 +408,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="col-md-4">
                       <div className="mb-3 form-group">
-                        <label class="form-label">Product Name</label>
+                        <label className="form-label">Product Name</label>
                         <input
                           type="text"
                           className="form-control"
@@ -419,7 +419,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="col-md-12">
                       <div className="mb-3 form-group">
-                        <label class="form-label">Describe your Enquiry</label>
+                        <label className="form-label">Describe your Enquiry</label>
                         <textarea
                           className="form-control"
                           placeholder="Describe  Your Enquiry"

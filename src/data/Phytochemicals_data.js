@@ -42,7 +42,7 @@ const phytochemicals = [
         "InChIKey": "NAAJVHHFAXWBOK-ZDUSSCGKSA-N",
         "PubChemCID": 160512,
         "MDLNumber": "MFCD09031381",
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",        
       },
       {
         "id": 3,
@@ -63,7 +63,9 @@ const phytochemicals = [
         "InChIKey": "YIMHGPSYDOGBPI-BVIVALHHSA-N",
         "PubChemCID": 9847548,
         "MDLNumber": "MFCD06656312",
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",        
+        "type":"lead_analogs",
+        // "type":"analogs",
       },
       {
         "id": 4,
@@ -84,7 +86,8 @@ const phytochemicals = [
         "InChIKey": "AWVMHXZWAKRDGG-MEBIVHGNSA-N",
         "PubChemCID": 44576309,
         "MDLNumber": "MFCD03788778",
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead_analogs",
       },
       {
         "id": 5,
@@ -105,7 +108,8 @@ const phytochemicals = [
         "InChIKey": "XMJAJFVLHDIEHF-CRBRZBHVSA-N",
         "PubChemCID": 5708351,
         "MDLNumber": "MFCD07778081",
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead_analogs",
       },
       {
         "id": 6,
@@ -126,7 +130,8 @@ const phytochemicals = [
         "InChIKey": "MKTMIPAPOLDOQT-QAYSIJLNSA-N",
         "PubChemCID": 10767792,
         "MDLNumber": null,
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead_analogs",
       },
       {
         "id": 7,
@@ -210,7 +215,8 @@ const phytochemicals = [
         "InChIKey": null,
         "PubChemCID": null,
         "MDLNumber": null,
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead"
       },    
       {
         "id": 11,
@@ -252,7 +258,8 @@ const phytochemicals = [
         "InChIKey": "HCEYJYMNIQHPPK-DXTZDJJUSA-N",
         "PubChemCID": 3034112,
         "MDLNumber": null,
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead"
       },
       {
         "id": 13,
@@ -294,7 +301,8 @@ const phytochemicals = [
         "InChIKey": "PXOYOCNNSUAQNS-AGNJHWRGSA-N",
         "PubChemCID": 72724,
         "MDLNumber": "MFCD00274568",
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead_analogs",
       },
       {
         "id": 15,
@@ -315,7 +323,8 @@ const phytochemicals = [
         "InChIKey": "BOJKULTULYSRAS-OTESTREVSA-N",
         "PubChemCID": 5318517,
         "MDLNumber": "MFCD07778082",
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead_analogs",
       },
       {
         "id": 16,
@@ -336,7 +345,8 @@ const phytochemicals = [
         "InChIKey": "XDROKJSWHURZGO-UHFFFAOYSA-N",
         "PubChemCID": 10658,
         "MDLNumber": "MFCD00064930",
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead"
       },
       {
         "id": 17,
@@ -357,7 +367,8 @@ const phytochemicals = [
         "InChIKey": "JXSVIVRDWWRQRT-DPJHZOGISA-N",
         "PubChemCID": 119034,
         "MDLNumber": "MFCD00238541",
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead_analogs",
       },
       {
         "id": 18,
@@ -399,7 +410,8 @@ const phytochemicals = [
         "InChIKey": "KWAMDQVQFVBEAU-HMWIRDDCSA-N",
         "PubChemCID": 12308714,
         "MDLNumber": "MFCD16036226",
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead_analogs",
       },
       {
         "id": 20,
@@ -420,7 +432,8 @@ const phytochemicals = [
         "InChIKey": "XXIKKMLIDXLAIK-RFKFVWFBSA-N",
         "PubChemCID": 10906239,
         "MDLNumber": null,
-        "InventoryStatus": "Available in gram quantities"
+        "InventoryStatus": "Available in gram quantities",
+        "type":"lead_analogs",
       },
     
   {
@@ -442,7 +455,8 @@ const phytochemicals = [
     "InChIKey": "LFYJSSARVMHQJB-QIXNEVBVSA-N",
     "PubChemCID": 5468522,
     "MDLNumber": "MFCD01707441",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 22,
@@ -589,7 +603,8 @@ const phytochemicals = [
     "InChIKey": "NEYCGDYQBQONFC-GGPFZBFUSA-N",
     "PubChemCID": 49863985,
     "MDLNumber": null,
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 29,
@@ -631,7 +646,8 @@ const phytochemicals = [
     "InChIKey": "YJXDGWUNRYLINJ-BHAPSIHVSA-N",
     "PubChemCID": 12004512,
     "MDLNumber": "MFCD01750174",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 31,
@@ -673,7 +689,8 @@ const phytochemicals = [
     "InChIKey": "WDXRGPWQVHZTQJ-XCTJHIRPSA-N",
     "PubChemCID": 6450278,
     "MDLNumber": "MFCD01310757",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead"
   },
   {
     "id": 33,
@@ -715,7 +732,8 @@ const phytochemicals = [
     "InChIKey": "CVUANYCQTOGILD-QVHKTLOISA-N",
     "PubChemCID": 73285,
     "MDLNumber": "MFCD08689940",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 35,
@@ -736,7 +754,8 @@ const phytochemicals = [
     "InChIKey": "QTYVPMSAPQBXMM-BXTHMLGCSA-N",
     "PubChemCID": 101243415,
     "MDLNumber": null,
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 36,
@@ -757,7 +776,8 @@ const phytochemicals = [
     "InChIKey": "MQYXUWHLBZFQQO-QGTGJCAVSA-N",
     "PubChemCID": 259846,
     "MDLNumber": "MFCD00017351",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 37,
@@ -778,7 +798,8 @@ const phytochemicals = [
     "InChIKey": "BIXJFIJYBLJTMK-MEBBXXQBSA-N",
     "PubChemCID": 14987,
     "MDLNumber": "MFCD00010029",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead"
   },
   {
     "id": 38,
@@ -799,7 +820,8 @@ const phytochemicals = [
     "InChIKey": "PRAUVHZJPXOEIF-QUKJEOBDSA-N",
     "PubChemCID": 73412,
     "MDLNumber": "MFCD11559128",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"analogs",
   },
   {
     "id": 39,
@@ -820,7 +842,8 @@ const phytochemicals = [
     "InChIKey": "BNMGUJRJUUDLHW-UHFFFAOYSA-N",
     "PubChemCID": 45356919,
     "MDLNumber": null,
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead"
   },
   {
     "id": 40,
@@ -862,7 +885,8 @@ const phytochemicals = [
     "InChIKey": "YGCYRQKJYWQXHG-RDNQFMDVSA-N",
     "PubChemCID": 9848024,
     "MDLNumber": "MFCD07779130",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 42,
@@ -883,7 +907,8 @@ const phytochemicals = [
     "InChIKey": "JZIQWNPPBKFOPT-FTCZZEDLSA-N",
     "PubChemCID": 100017,
     "MDLNUMBER": "MFCD01735386",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 43,
@@ -946,7 +971,8 @@ const phytochemicals = [
     "InChIKey": "MXXWOMGUGJBKIW-YPCIICBESA-N",
     "PubChemCID": 638024,
     "MDLNumber": "MFCD00005839",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"analogs",
   },
   {
     "id": 46,
@@ -967,7 +993,8 @@ const phytochemicals = [
     "InChIKey": "VABYUUZNAVQNPG-BQYQJAHWSA-N",
     "PubChemCID": 637858,
     "MDLNumber": "MFCD00075706",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead"
   },
   {
     "id": 47,
@@ -988,7 +1015,8 @@ const phytochemicals = [
     "InChIKey": "WHAAPCGHVWVUEX-GGWOSOGESA-N",
     "PubChemCID": 5320621,
     "MDLNumber": "MFCD15146947",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead"
   },
   {
     "id": 48,
@@ -1009,7 +1037,8 @@ const phytochemicals = [
     "InChIKey": "ZCCUUQDIBDJBTK-UHFFFAOYSA-N",
     "PubChemCID": 6199,
     "MDLNumber": "MFCD00010520",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead"
   },
   {
     "id": 49,
@@ -1030,7 +1059,8 @@ const phytochemicals = [
     "InChIKey": "VLEUZFDZJKSGMX-ONEGZZNKSA-N",
     "PubChemCID": 5281727,
     "MDLNumber": "MFCD00238710",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"analogs",
   },
   {
     "id": 50,
@@ -1156,7 +1186,8 @@ const phytochemicals = [
     "InChIKey": "YIICVSCAKJMMDJ-JTQLQIEISA-N",
     "PubChemCID": 442929,
     "MDLNumber": "MFCD09028068",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 56,
@@ -1177,7 +1208,8 @@ const phytochemicals = [
     "InChIKey": "SDIVYZXRQHWCKF-VIFPVBQESA-N",
     "PubChemCID": 10242,
     "MDLNumber": "MFCD11519457",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 57,
@@ -1198,7 +1230,8 @@ const phytochemicals = [
     "InChIKey": "DBRXOUCRJQVYJQ-NPRZOXALSA-N",
     "PubChemCID": 45489105,
     "MDLNumber": "MFCD10687098",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead_analogs",
   },
   {
     "id": 58,
@@ -1219,7 +1252,8 @@ const phytochemicals = [
     "InChIKey": "5H3/t16-,17-,18-,20+,21-,22-,23-,25-,26-,27+,28-/m0/s1",
     "PubChemCID": 11294368,
     "MDLNumber": "MFCD07779143",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead"
   }, 
   {
     "id": 59,
@@ -1261,7 +1295,8 @@ const phytochemicals = [
     "InChIKey": "FAZIYUIDUNHZRG-PCTWTJKKSA-N",
     "PubChemCID": 21679027,
     "MDLNumber": "MFCD09264639",
-    "InventoryStatus": "Available in gram quantities"
+    "InventoryStatus": "Available in gram quantities",
+    "type":"lead"
   },
 ];
 
