@@ -10,7 +10,6 @@ const ProductEnquiry = (product) => {
   const [enquiryDescription, setEnquiryDescription] = useState("");
 
   const [errors, setErrors] = useState({});
-
   const validateForm = () => {
     let isValid = true;
     const newErrors = {};
