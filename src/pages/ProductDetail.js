@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 // import Product02 from "../assets/img/products/product02.png";
 import phytochemicals from "../data/Phytochemicals_data";
+import ProductEnquiry from "./ProductEnquiry";
 
 const ProductDetail = () => {
   const pageTitle = "Pellitorine";
@@ -312,127 +313,7 @@ const ProductDetail = () => {
                   {/* Tab ends */}
                 </div>
               </div>
-              {/*product enquiry form  */}
-              <section className="ProductEnquiryform p-5 rounded-4 mt-5">
-                <div className="row">
-                  <div className="col-md-6">
-                    <h3 className="h3 font-semibold">
-                      Have a question on this product?
-                    </h3>
-                    <p>
-                      <small className="font-gray">
-                        FILL THE FORM, YOU’LL BE CONTACTED SHORTLY
-                      </small>
-                    </p>
-                  </div>
-                  <div className="col-md-6">
-                    <p>
-                      Do not hesitate to contact our business representatives:
-                      they'll be happy to get in touch with you. Just fill in
-                      the following form.{" "}
-                    </p>
-                  </div>
-                </div>
-                <form className="pt-4">
-                  <div className="row">
-                    <div className="col-md-4">
-                      <div className="mb-3 form-group">
-                        <label className="form-label">First Name</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Write your First name"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="mb-3 form-group">
-                        <label className="form-label">Last Name</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Write your Last name"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="mb-3 form-group">
-                        <label className="form-label">Designation</label>
-                        <select className="form-select">
-                          <option selected>Select Your Designation</option>
-                          <option>Employee</option>
-                          <option>Manager</option>
-                          <option>Researcher</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="mb-3 form-group">
-                        <label className="form-label">Phone Number</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Phone Number"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="mb-3 form-group">
-                        <label className="form-label">Email ID</label>
-                        <input
-                          type="email"
-                          className="form-control"
-                          placeholder="Enter Valid Email"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="mb-3 form-group">
-                        <label className="form-label">Company Name</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Enter Valid Email"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="mb-3 form-group">
-                        <label className="form-label">Country Name</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Country"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="mb-3 form-group">
-                        <label className="form-label">Product Name</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder={product.Product}
-                          value={product.Product}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="mb-3 form-group">
-                        <label className="form-label">Describe your Enquiry</label>
-                        <textarea
-                          className="form-control"
-                          placeholder="Describe  Your Enquiry"
-                        ></textarea>
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <button className="btn green-btn w-100">Submit</button>
-                    </div>
-                  </div>
-                </form>
-              </section>
-              {/*product enquiry form ends */}
+             <ProductEnquiry product = {product}></ProductEnquiry>
             </div>
           </div>
         </div>

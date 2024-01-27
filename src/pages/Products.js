@@ -9,7 +9,7 @@ function Products() {
   const navigate = useNavigate();
 
   const handleClick = (id) => {
-    navigate(`/Product-Detail?=${id}`);
+    navigate(`/Product-Detail?q=${id}`);
   };
   const leadItems = phytochemicals.filter(
     (item) => item.type === "lead" || item.type === "lead_analogs"
