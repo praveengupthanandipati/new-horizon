@@ -1,4 +1,4 @@
-import { React, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
@@ -14,6 +14,7 @@ function Contact() {
   const [subject, setsubject] = useState("");
   const [description, setDescription] = useState("");
   const form = useRef();
+  const [statusMessage, setStatusMessage] = useState(null);
 
   const validateForm = () => {
     let isValid = true;
@@ -53,8 +54,8 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (validateForm()) {
-      sendEmail();
       const formData = {
         firstName,
         lastName,
@@ -63,30 +64,50 @@ function Contact() {
         subject,
         description,
       };
+      sendEmail(formData);
+      form.current.reset();
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setPhoneNumber("");
+      setCompanyName("");
+      setsubject("");
+      setDescription("");
+      setErrors({});
     }
   };
 
-  const sendEmail = (e) => {
-    // handleSubmit()
-    // e.preventDefault();
+  const sendEmail = (formData) => {
+    const emailData = {
+      to_name: "New Horizon Team",
+      first_name: `${formData.firstName} ${formData.lastName}`,
+      email: formData.email,
+      phoneNumber: formData.phoneNumber,
+      companyName: formData.companyName,
+      subject: formData.subject,
+      message: formData.description,
+    };
 
     emailjs
-      .sendForm(
-        "service_ddavzm6",
-        "template_pii2o4m",
-        form.current, // Access the current property of the ref to get the form element
-        "WOiMeMwLOwRKj3EPt"
+      .send(
+        "service_ddavzm6", // service id
+        "template_pii2o4m", //tmplate id
+        emailData,
+        "WOiMeMwLOwRKj3EPt" //public key
       )
       .then(
         (result) => {
-          console.log(result.text);
-          console.log("message sent");
+          setStatusMessage("Mail sent successfully!"); // Update status message on success
         },
         (error) => {
-          console.log(error.text);
+          setStatusMessage("Mail failed to send. Please try again."); // Update status message on failure
         }
       );
+    setTimeout(() => {
+      setStatusMessage(null);
+    }, 30000);
   };
+
   return (
     <div>
       <section className="subPage">
@@ -120,6 +141,15 @@ function Contact() {
                   <h2 className="h2 font-semibold font-black pb-3">
                     Send a Message
                   </h2>
+                  {statusMessage && (
+                    <div
+                      className={`alert alert-success ${
+                        statusMessage.includes("failed") ? "error" : "success"
+                      }`}
+                    >
+                      {statusMessage}
+                    </div>
+                  )}
                   <form
                     className="contactForm"
                     onSubmit={handleSubmit}
@@ -133,7 +163,13 @@ function Contact() {
                           placeholder="First Name"
                           aria-label="default input example"
                           value={firstName}
-                          onChange={(e) => setFirstName(e.target.value)}
+                          onChange={(e) => {
+                            setFirstName(e.target.value);
+                            setErrors((prevErrors) => ({
+                              ...prevErrors,
+                              firstName: null,
+                            }));
+                          }}
                         />
                         {errors.firstName && (
                           <small className="text-danger">
@@ -148,7 +184,13 @@ function Contact() {
                           placeholder="Last Name"
                           aria-label="default input example"
                           value={lastName}
-                          onChange={(e) => setLastName(e.target.value)}
+                          onChange={(e) => {
+                            setLastName(e.target.value);
+                            setErrors((prevErrors) => ({
+                              ...prevErrors,
+                              lastName: null,
+                            }));
+                          }}
                         />
                         {errors.lastName && (
                           <small className="text-danger">
@@ -163,7 +205,13 @@ function Contact() {
                           placeholder="Write Email"
                           aria-label="default input example"
                           value={email}
-                          onChange={(e) => setEmail(e.target.value)}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                            setErrors((prevErrors) => ({
+                              ...prevErrors,
+                              email: null,
+                            }));
+                          }}
                         />
                         {errors.email && (
                           <small className="text-danger">{errors.email}</small>
@@ -176,7 +224,13 @@ function Contact() {
                           placeholder="Phone Number"
                           aria-label="default input example"
                           value={phoneNumber}
-                          onChange={(e) => setPhoneNumber(e.target.value)}
+                          onChange={(e) => {
+                            setPhoneNumber(e.target.value);
+                            setErrors((prevErrors) => ({
+                              ...prevErrors,
+                              phoneNumber: null,
+                            }));
+                          }}
                         />
                         {errors.phoneNumber && (
                           <small className="text-danger">
@@ -191,7 +245,13 @@ function Contact() {
                           placeholder="Company (Optional)"
                           aria-label="default input example"
                           value={companyName}
-                          onChange={(e) => setCompanyName(e.target.value)}
+                          onChange={(e) => {
+                            setCompanyName(e.target.value);
+                            setErrors((prevErrors) => ({
+                              ...prevErrors,
+                              companyName: null,
+                            }));
+                          }}
                         />
                       </div>
                       <div className="col-md-6 pb-3">
@@ -201,7 +261,13 @@ function Contact() {
                           placeholder="Subject"
                           aria-label="default input example"
                           value={subject}
-                          onChange={(e) => setsubject(e.target.value)}
+                          onChange={(e) => {
+                            setsubject(e.target.value);
+                            setErrors((prevErrors) => ({
+                              ...prevErrors,
+                              subject: null,
+                            }));
+                          }}
                         />
                         {errors.subject && (
                           <small className="text-danger">
@@ -213,11 +279,17 @@ function Contact() {
                         <textarea
                           className="form-control"
                           type="text"
-                          placeholder="Description"
+                          placeholder="Message"
                           aria-label="default input example"
                           style={{ height: "150px" }}
                           value={description}
-                          onChange={(e) => setDescription(e.target.value)}
+                          onChange={(e) => {
+                            setDescription(e.target.value);
+                            setErrors((prevErrors) => ({
+                              ...prevErrors,
+                              description: null,
+                            }));
+                          }}
                         />
                         {errors.description && (
                           <small className="text-danger">
