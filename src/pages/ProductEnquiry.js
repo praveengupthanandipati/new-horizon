@@ -145,7 +145,7 @@ const ProductEnquiryform = (product) => {
       </div>
       {statusMessage && (
         <div
-          className={`alert alert-success ${
+          className={`alert alert-success font-bold ${
             statusMessage.includes("failed") ? "error" : "success"
           }`}
         >
@@ -224,7 +224,7 @@ const ProductEnquiryform = (product) => {
             <div className="mb-3 form-group">
               <label className="form-label">Phone Number</label>
               <input
-                type="text"
+                type="number"
                 className="form-control"
                 placeholder="Phone Number"
                 value={phoneNumber}

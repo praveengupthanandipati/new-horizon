@@ -143,7 +143,7 @@ function Contact() {
                   </h2>
                   {statusMessage && (
                     <div
-                      className={`alert alert-success ${
+                      className={`alert alert-success font-bold ${
                         statusMessage.includes("failed") ? "error" : "success"
                       }`}
                     >
