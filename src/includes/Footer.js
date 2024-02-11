@@ -1,11 +1,39 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import footerlogo from "../assets/img/logo-color.svg";
 
 function Footer() {
+  
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div>
       <footer className="footer">
+      {isScrolled && (
+        <div className="scroll-to-top" onClick={scrollToTop}>
+          <NavLink>Move to Top</NavLink>
+        </div>
+      )}
+    
         <div className="container">
           <div className="row">
             <div className="col-md-3">
@@ -72,8 +100,8 @@ function Footer() {
                       mangcoding123@newhorizon.com
                     </li>
                     <li>
-                      <span className="icon-pin"></span> IDA Mallapur, Hyderabad,
-                      Telangana - 500034
+                      <span className="icon-pin"></span> IDA Mallapur,
+                      Hyderabad, Telangana - 500034
                     </li>
                   </ul>
                   <div className="pt-3 social">

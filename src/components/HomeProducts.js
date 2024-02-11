@@ -5,59 +5,25 @@ import Product01 from "../assets/img/products/product01.png";
 import Product02 from "../assets/img/products/product02.png";
 import Product03 from "../assets/img/products/product03.png";
 import Product04 from "../assets/img/products/product04.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import phytochemicals from "../data/Phytochemicals_data";
 
 const HomeProducts = () => {
-  const ProductsItems = [
-    {
-      id: 1,
-      imgname: Product01,
-      cas: "18836-52-7",
-      title: "(2E,4E)-N-Isobutyl Decadienamide (Pellitorin)",
-    },
-    {
-      id: 2,
-      imgname: Product02,
-      cas: "532-65-0",
-      title: "(S)-(+)-Turmerone,Ar(Ar-Turmerone)",
-    },
-    {
-      id: 3,
-      imgname: Product03,
-      cas: "17019-92-0",
-      title: "11-Ketoβ boswellic acid (KBA)",
-    },
-    {
-      id: 4,
-      imgname: Product04,
-      cas: "60124-17-6",
-      title: "12-Deoxy withastramonolide 27-Hydroxywithanolide B)",
-    },
-    {
-      id: 5,
-      imgname: Product01,
-      cas: "18836-52-7",
-      title: "(2E,4E)-N-Isobutyl Decadienamide (Pellitorin)",
-    },
-    {
-      id: 6,
-      imgname: Product02,
-      cas: "532-65-0",
-      title: "(S)-(+)-Turmerone,Ar(Ar-Turmerone)",
-    },
-    {
-      id: 7,
-      imgname: Product03,
-      cas: "17019-92-0",
-      title: "11-Ketoβ boswellic acid (KBA)",
-    },
-    {
-      id: 8,
-      imgname: Product04,
-      cas: "60124-17-6",
-      title: "12-Deoxy withastramonolide 27-Hydroxywithanolide B)",
-    },
-  ];
+  const navigate = useNavigate();
+  const handleTabClick = (id, type) => {
+    scrollToTop()
+    localStorage.setItem("id", id);
+    navigate(`/Product-Detail?q=${id}&type=${type}`);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const homeProducts = phytochemicals.slice(0, 20);
   return (
     <div>
       <div className="container">
@@ -84,22 +50,25 @@ const HomeProducts = () => {
           modules={[Pagination]}
           className="mySwiper px-3"
         >
-          {ProductsItems.map((item) => (
+          {homeProducts.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="HomePorudctitem shadow">
+              <div
+                className="HomePorudctitem shadow"
+                onClick={() => handleTabClick(item.id, "all")}
+              >
                 <figure>
                   <NavLink>
                     <img
-                      src={item.imgname}
-                      alt={item.title}
+                      src={item.Image}
+                      alt={item.Product}
                       className="img-fluid w-100"
                     />
                   </NavLink>
                 </figure>
                 <article>
                   <NavLink>
-                    <h6 className="text-center">CAS No:{item.cas}</h6>
-                    <p className="text-center p-0 m-0">{item.title}</p>
+                    <h6 className="text-center">CAS No:{item.CASNumber}</h6>
+                    <p className="text-center p-0 m-0">{item.Product}</p>
                   </NavLink>
                 </article>
               </div>

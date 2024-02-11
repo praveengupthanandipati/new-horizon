@@ -8,16 +8,26 @@ function Products() {
   const pageIntro = "Our Popular Products";
   const navigate = useNavigate();
 
-  const handleClick = (id) => {
-    navigate(`/Product-Detail?q=${id}`);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
+
+   const handleTabClick = (id, type) => {
+    localStorage.setItem("id", id);
+    scrollToTop()
+    navigate(`/Product-Detail?q=${id}&type=${type}`);
+  };
+
   const leadItems = phytochemicals.filter(
     (item) => item.type === "lead" || item.type === "lead_analogs"
   );
   const analogsItems = phytochemicals.filter(
     (item) => item.type === "analogs" || item.type === "lead_analogs"
   );
-  // console.log(leadItems);
+
   return (
     <div>
       <section className="subPage">
@@ -122,7 +132,7 @@ function Products() {
                         {phytochemicals.map((item, index) => (
                           <tr key={index}>
                             <td width="85%">
-                              <a href="" onClick={() => handleClick(item.id)}>
+                              <a  href="" onClick={() => handleTabClick(item.id, "all")}>
                                 {item.Product}
                               </a>
                             </td>
@@ -153,7 +163,10 @@ function Products() {
                         {leadItems.map((item, index) => (
                           <tr key={index}>
                             <td width="85%">
-                              <a href="" onClick={() => handleClick(item.id)}>
+                              <a
+                                href=""
+                                onClick={() => handleTabClick(item.id, "lead")}
+                              >
                                 {item.Product}
                               </a>
                             </td>
@@ -184,7 +197,12 @@ function Products() {
                         {analogsItems.map((item, index) => (
                           <tr key={index}>
                             <td width="85%">
-                              <a href="" onClick={() => handleClick(item.id)}>
+                              <a
+                                href=""
+                                onClick={() =>
+                                  handleTabClick(item.id, "analog")
+                                }
+                              >
                                 {item.Product}
                               </a>
                             </td>

@@ -1,46 +1,49 @@
-import { React, useState, useEffect } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-// import Product02 from "../assets/img/products/product02.png";
 import phytochemicals from "../data/Phytochemicals_data";
-import ProductEnquiry from "./ProductEnquiry";
+// import ProductEnquiryform from "./ProductEnquiryform";
+import ProductEnquiryform from "./ProductEnquiry";
 
-const ProductDetail = () => {
-  const pageTitle = "Pellitorine";
+
+const ProductDetail = memo(() => {
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
   const id = queryParams.get("q");
-    console.log(id);
+  const type = queryParams.get("type");
   const [product, setProduct] = useState(null);
-  useEffect(() => {
+  const [loading, setLoading] = useState(true);
+  const localId = localStorage.getItem("id");
+  const getData = () => {
+    setLoading(true);
     const foundProduct = phytochemicals.find(
       (item) => item.id.toString() === id
     );
-    setProduct(foundProduct);
-  }, [phytochemicals, id]);
+
+    if (foundProduct && foundProduct.id.toString() !== product?.id) {
+      setProduct(foundProduct);
+    }
+
+    setLoading(false);
+  };
+  // useEffect(() => {
+
+  //   console.log("getData...");
+  // }, [id]);
+
+  if (loading) {
+    console.log("Loading...");
+    getData();
+
+    return <div>Loading...</div>;
+  }
 
   if (!product) {
     return <div>Product not found</div>;
   }
 
-  // const getMessageForKey = (key) => {
-  //   if (phytochemicals[key] === null) {
-  //     return `The value for ${key} is null`;
-  //   } else {
-  //     return `The value  for ${key} is not null`;
-  //   }
-  // };
-
-  // //render message for each key
-  // const renderMessages = () => {
-  //   return Object.keys(phytochemicals).map((key) => (
-  //     <p key={key}>{getMessageForKey} </p>
-  //   ));
-  // };
-
   return (
     <div>
       <section className="subPage">
-        {/* sub page header starts */}
         <div className="subPageHeader">
           <div className="container">
             <div className="row pt-5">
@@ -50,8 +53,6 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-        {/* Sub page header ends */}
-        {/*sub page main */}
         <div className="subPageMain">
           <div className="container">
             <nav aria-label="breadcrumb">
@@ -78,7 +79,11 @@ const ProductDetail = () => {
                 </div>
                 <div className="col-md-9">
                   {/* Tab Starts */}
-                  <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <ul
+                    className="nav nav-pills mb-3"
+                    id="pills-tab"
+                    role="tablist"
+                  >
                     <li className="nav-item" role="presentation">
                       <button
                         className="nav-link active"
@@ -143,14 +148,15 @@ const ProductDetail = () => {
                       role="tabpanel"
                       aria-labelledby="pills-Description-tab"
                     >
-                      {/* Description starts */}
                       <div className="row pt-2">
                         <div className="col-md-6">
                           <div className="product-desc-item">
                             <p className="text-uppercase font-bold position-relative">
                               Botanical Source
                             </p>
-                            <h6 className="h6">{product?.BotanicalSource || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.BotanicalSource || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-12">
@@ -158,7 +164,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               IUPAC Name
                             </p>
-                            <h6 className="h6">{product?.IUPACName || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.IUPACName || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -166,7 +174,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Synonyms
                             </p>
-                            <h6 className="h6">{product?.Synonyms || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.Synonyms || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -175,7 +185,9 @@ const ProductDetail = () => {
                               CAS Number
                             </p>
                             <h6 className="h6">
-                              <strong>{product?.CASNumber || "No Data Found"}</strong>
+                              <strong>
+                                {product?.CASNumber || "No Data Found"}
+                              </strong>
                             </h6>
                           </div>
                         </div>
@@ -184,7 +196,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Molecular Formula
                             </p>
-                            <h6 className="h6">{product?.MolecularFormula || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.MolecularFormula || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -192,7 +206,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Molecular weight
                             </p>
-                            <h6 className="h6">{product?.MolecularWeight || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.MolecularWeight || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -200,7 +216,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Appearance
                             </p>
-                            <h6 className="h6">{product?.Appearance || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.Appearance || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -208,7 +226,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Purity
                             </p>
-                            <h6 className="h6">{product?.Purity || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.Purity || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -216,7 +236,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               HRMS(ESI)
                             </p>
-                            <h6 className="h6">{product?.HRMS_ESI || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.HRMS_ESI || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -225,7 +247,8 @@ const ProductDetail = () => {
                               Specific Rotation [a]D 20
                             </p>
                             <h6 className="h6">
-                              {product?.SpecificRotation_aD20 || "No Data Found"}
+                              {product?.SpecificRotation_aD20 ||
+                                "No Data Found"}
                             </h6>
                           </div>
                         </div>
@@ -234,7 +257,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               InChI Key
                             </p>
-                            <h6 className="h6">{product?.InChIKey || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.InChIKey || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-12">
@@ -242,7 +267,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               SMILES
                             </p>
-                            <h6 className="h6">{product?.SMILES || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.SMILES || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
 
@@ -251,7 +278,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               InChI Code
                             </p>
-                            <h6 className="h6">{product?.InChICode || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.InChICode || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
 
@@ -260,7 +289,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               PubChem CID
                             </p>
-                            <h6 className="h6">{product?.PubChemCID || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.PubChemCID || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -268,7 +299,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               MDL Number
                             </p>
-                            <h6 className="h6">{product?.MDLNumber || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.MDLNumber || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                         <div className="col-md-4">
@@ -276,7 +309,9 @@ const ProductDetail = () => {
                             <p className="text-uppercase font-bold position-relative">
                               Inventory Status
                             </p>
-                            <h6 className="h6">{product?.InventoryStatus || "No Data Found"}</h6>
+                            <h6 className="h6">
+                              {product?.InventoryStatus || "No Data Found"}
+                            </h6>
                           </div>
                         </div>
                       </div>
@@ -309,18 +344,15 @@ const ProductDetail = () => {
                       Analogs Not Available Currently, We will get back soon
                     </div>
                   </div>
-
-                  {/* Tab ends */}
                 </div>
               </div>
-             <ProductEnquiry product = {product}></ProductEnquiry>
+              <ProductEnquiryform product={product} />
             </div>
           </div>
         </div>
-        {/*sub page main ends */}
       </section>
     </div>
   );
-};
+});
 
 export default ProductDetail;

@@ -318,6 +318,7 @@ header {
 
 footer {
   font-size: $fsize;
+  position: relative;
   margin-top: 50px;
   // background: lighten(map-get($colors, primary), 40%);
   background-image: linear-gradient(
@@ -356,6 +357,11 @@ footer {
   }
   .bottomFooter {
     margin-top: 25px;
+  }
+  .scroll-to-top {   
+    right: 0;
+    bottom: 50px;
+    position: fixed;   
   }
 }
 
