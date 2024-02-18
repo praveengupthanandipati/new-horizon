@@ -14,10 +14,10 @@ function About() {
       <section className="subPage">
         <div className="subPageHeader">
           <div className="container">
-            <div className="row pt-5">
+            <div className="row pt-2 pt-md-5">
               <div className="col-lg-6 col-md-10">
                 <h1 className="h1 font-bold">{pageTitle}</h1>
-                <p>{pageIntro}</p>
+                <p className="d-none d-md-block">{pageIntro}</p>
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@ function About() {
           <div className="container">
             <div className="pageContainer">
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6 d-none d-md-block">
                   <figure className="row">
                     <div className="col-md-6 align-self-center position-relative">
                       <img src={about01} alt="" className="img-fluid" />
@@ -72,10 +72,9 @@ function About() {
                     comprehensive valuable services for general well being.
                   </p>
                   <ul className="list-items">
-                    <li>Extramural Funding</li>
-                    <li>Bacteria Markers</li>
-                    <li>Nam nec mi euismod euismod</li>
-                    <li>In aliquet dui nec lectus</li>
+                    <li>Team Expertise</li>
+                    <li>Research and Development</li>
+                    <li>Impact and Future Directions</li>
                   </ul>
                 </div>
               </div>

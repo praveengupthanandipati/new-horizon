@@ -23,7 +23,7 @@ const HomeProducts = () => {
     });
   };
 
-  const homeProducts = phytochemicals.slice(0, 20);
+  const homeProducts = phytochemicals.slice(0, 15);
   return (
     <div>
       <div className="container">

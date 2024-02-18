@@ -57,7 +57,7 @@ function HomeBanner() {
               </div>
               <article>
                 <div className="row">
-                  <div className="col-lg-6">
+                  <div className="col-md-6 col-sm-10">
                     <h2 className="font-bold font-white">{item.title}</h2>
                     <p className="font-white">{item.description}</p>
                   </div>

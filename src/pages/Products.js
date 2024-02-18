@@ -33,10 +33,10 @@ function Products() {
       <section className="subPage">
         <div className="subPageHeader">
           <div className="container">
-            <div className="row pt-5">
+            <div className="row pt-2 pt-md-5">
               <div className="col-lg-6 col-md-10">
                 <h1 className="h1 font-bold">{pageTitle}</h1>
-                <p>{pageIntro}</p>
+                <p className="d-none d-md-block">{pageIntro}</p>
               </div>
             </div>
           </div>
@@ -131,12 +131,12 @@ function Products() {
                       <tbody>
                         {phytochemicals.map((item, index) => (
                           <tr key={index}>
-                            <td width="85%">
+                            <td width="65%">
                               <a  href="" onClick={() => handleTabClick(item.id, "all")}>
                                 {item.Product}
                               </a>
                             </td>
-                            <td width="15%">{item.CASNumber}</td>
+                            <td width="35%">{item.CASNumber}</td>
                           </tr>
                         ))}
                       </tbody>

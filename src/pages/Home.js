@@ -95,7 +95,8 @@ function Home() {
                       Certified Laboratory
                     </h5>
                     <p className="pb-0 mb-0">
-                      Consectetur adipiscing elit sed do eiusmod tempo
+                      Reliable testing, precise analysis, strict standards,
+                      trusted results for businesses' quality assurance.
                     </p>
                   </div>
                 </div>
@@ -109,7 +110,8 @@ function Home() {
                   <div className="ps-3">
                     <h5 className="h5 font-bold font-black">Best Lab Awards</h5>
                     <p className="pb-0 mb-0">
-                      Consectetur adipiscing elit sed do eiusmod tempo
+                      Celebrating excellence in bioscience innovation, research,
+                      and advancement for a brighter future.
                     </p>
                   </div>
                 </div>
@@ -124,7 +126,8 @@ function Home() {
                       20 Years Experience
                     </h5>
                     <p className="pb-0 mb-0">
-                      Consectetur adipiscing elit sed do eiusmod tempo
+                      Two decades of excellence: Pioneering bioscience
+                      breakthroughs for a healthier, more sustainable world.
                     </p>
                   </div>
                 </div>
@@ -134,10 +137,10 @@ function Home() {
         </section>
 
         {/* About Section */}
-        <section className="Homeabout py-2 py-lg-5">
+        <section className="Homeabout py-3 py-lg-5">
           <div className="container">
             <div className="row justify-content-between">
-              <div className="col-md-6 align-self-center">
+              <div className="col-lg-6 align-self-center">
                 <div className="sectionTitle pb-3">
                   <h6>Innovative Solutions</h6>
                   <h3 class="font-bold">
@@ -160,9 +163,9 @@ function Home() {
                   potential.
                 </p>
                 <div>
-                  <a href="javascript:void(0)" className="green-btn">
+                  <NavLink to="/About" className="green-btn">
                     Read More About us
-                  </a>
+                  </NavLink>
                 </div>
                 <div className="row company-highletscol">
                   {abouthighlet.map((item) => (
@@ -173,7 +176,7 @@ function Home() {
                   ))}
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-lg-6 d-none d-lg-block">
                 <figure className="aboutImage">
                   <img src={AboutImage} alt="" className="img-fluid" />
                   <div className="ExpNumber shadow">
@@ -197,13 +200,19 @@ function Home() {
             </div>
             <div className="row">
               {categoryHomeItems.map((item) => (
-                <div className="col-md-4">
+                <div className="col-lg-4">
                   <div className="cat-col">
-                    <img src={item.Image} alt="" className="img-fluid w-100" />
-                    <article className="p-3">
-                      <h4 className="font-bold">{item.Title}</h4>
-                      <p>{item.Desc}</p>
-                    </article>
+                    <NavLink to="/Products">
+                      <img
+                        src={item.Image}
+                        alt=""
+                        className="img-fluid w-100"
+                      />
+                      <article className="p-3">
+                        <h4 className="font-bold">{item.Title}</h4>
+                        <p>{item.Desc}</p>
+                      </article>
+                    </NavLink>
                   </div>
                 </div>
               ))}
@@ -231,7 +240,7 @@ function Home() {
               <h6>{whychooseusTitleTop}</h6>
               <h3 class="font-bold">{whychooseusTitle}</h3>
             </div>
-            <div className="row py-2 pymd-5">
+            <div className="row py-2 py-md-5">
               <div className="col-md-4 align-self-center">
                 <div className="whycol d-flex">
                   <div>
@@ -275,7 +284,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-4">
+              <div className="col-md-4 d-none d-md-block">
                 <img
                   src={Whychooseusimg}
                   alt=""
@@ -333,7 +342,7 @@ function Home() {
         </section>
 
         {/* stories home page */}
-        <section className="HomeStories">
+        <section className="HomeStories d-none">
           <div className="container">
             <div className="sectionTitle pb-3">
               <h6>{storyTitleTop}</h6>

@@ -126,7 +126,7 @@ const ProductEnquiryform = (product) => {
   };
 
   return (
-    <section className="ProductEnquiryform p-5 rounded-4 mt-5">
+    <section className="ProductEnquiryform p-3 p-md-5 rounded-4 mt-2 mt-md-5 ">
       <div className="row">
         <div className="col-md-6">
           <h3 className="h3 font-semibold">Have a question on this product?</h3>
@@ -152,7 +152,7 @@ const ProductEnquiryform = (product) => {
           {statusMessage}
         </div>
       )}
-      <form className="pt-4" onSubmit={handleSubmit} ref={form}>
+      <form className="pt-2 pt-md-4" onSubmit={handleSubmit} ref={form}>
         <div className="row">
           <div className="col-md-4">
             <div className="mb-3 form-group">

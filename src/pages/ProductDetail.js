@@ -46,7 +46,7 @@ const ProductDetail = memo(() => {
       <section className="subPage">
         <div className="subPageHeader">
           <div className="container">
-            <div className="row pt-5">
+            <div className="row pt-2 pt-md-5">
               <div className="col-lg-6 col-md-10">
                 <h1 className="h1 font-bold">{product.Product}</h1>
               </div>

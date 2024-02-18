@@ -113,10 +113,10 @@ function Contact() {
       <section className="subPage">
         <div className="subPageHeader">
           <div className="container">
-            <div className="row pt-5">
+            <div className="row pt-2 pt-md-5">
               <div className="col-lg-6 col-md-10">
                 <h1 className="h1 font-bold">{pageTitle}</h1>
-                <p>{pageIntro}</p>
+                <p className="d-none d-md-block">{pageIntro}</p>
               </div>
             </div>
           </div>
