@@ -3,8 +3,10 @@ import { NavLink } from "react-router-dom";
 import about01 from "../assets/img/about-bg-04.jpg";
 import about02 from "../assets/img/about-bg-05.jpg";
 import about03 from "../assets/img/about-bg-06.jpg";
+import scrollToTop from "../includes/scrollToTop";
 
 function About() {
+  scrollToTop(); //page load move top
   const pageTitle = "About New Horizon Botanicals";
   const pageIntro =
     "Welcome to our innovative bioscience company, dedicated to advancing health through cutting-edge research, development, and sustainable solutions for a better future.";

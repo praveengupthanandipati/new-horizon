@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import about02 from "../assets/img/about-bg-05.jpg";
+import scrollToTop from "../includes/scrollToTop";
 
 function Services() {
+  scrollToTop(); //page load move top
   const pageTitle = "Services";
   const pageIntro =
     "Focused services tailored to meet your needs and exceed expectations.";

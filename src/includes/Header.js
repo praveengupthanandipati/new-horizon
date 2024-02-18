@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/img/logo-color.svg";
+import scrollToTop from "../includes/scrollToTop"; //page load move top
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

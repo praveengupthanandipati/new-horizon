@@ -2,22 +2,23 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import phytochemicals from "../data/Phytochemicals_data";
 import PhytochemicalsPdf from "../assets/files/Listofphytochemicalswithstructuresandactivity.pdf";
+import scrollToTop from "../includes/scrollToTop";
 
 function Products() {
   const pageTitle = "Products";
   const pageIntro = "Our Popular Products";
   const navigate = useNavigate();
+  scrollToTop();
+  // const scrollToTop = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-   const handleTabClick = (id, type) => {
+  const handleTabClick = (id, type) => {
     localStorage.setItem("id", id);
-    scrollToTop()
+    scrollToTop(0, 0);
     navigate(`/Product-Detail?q=${id}&type=${type}`);
   };
 
@@ -132,7 +133,10 @@ function Products() {
                         {phytochemicals.map((item, index) => (
                           <tr key={index}>
                             <td width="65%">
-                              <a  href="" onClick={() => handleTabClick(item.id, "all")}>
+                              <a
+                                href=""
+                                onClick={() => handleTabClick(item.id, "all")}
+                              >
                                 {item.Product}
                               </a>
                             </td>

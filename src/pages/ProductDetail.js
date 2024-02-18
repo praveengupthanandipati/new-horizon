@@ -4,7 +4,6 @@ import phytochemicals from "../data/Phytochemicals_data";
 // import ProductEnquiryform from "./ProductEnquiryform";
 import ProductEnquiryform from "./ProductEnquiry";
 
-
 const ProductDetail = memo(() => {
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
@@ -21,6 +20,7 @@ const ProductDetail = memo(() => {
 
     if (foundProduct && foundProduct.id.toString() !== product?.id) {
       setProduct(foundProduct);
+      console.log(foundProduct);
     }
 
     setLoading(false);

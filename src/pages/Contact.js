@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import scrollToTop from "../includes/scrollToTop";
 
 function Contact() {
+  scrollToTop(); //page load move top
   const pageTitle = "Contact";
   const pageIntro = "Reach us";
   const [errors, setErrors] = useState({});

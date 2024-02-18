@@ -10,8 +10,10 @@ import story01image from "../assets/img/story/storyimg01.jpg";
 import story02image from "../assets/img/story/storyimg02.jpg";
 import story03image from "../assets/img/story/storyimg03.jpg";
 import { NavLink } from "react-router-dom";
+import scrollToTop from "../includes/scrollToTop";
 
 function Home() {
+  scrollToTop(); //page load move top
   let categoryTitleTop = "Categories";
   let categoryTitle = "Popular Categories";
 
