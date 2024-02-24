@@ -634,6 +634,7 @@ footer {
   }
   .h6 {
     font-size: $fsize + 2;
+    word-wrap: break-word;
   }
 }
 

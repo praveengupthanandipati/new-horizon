@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import about01 from "../assets/img/about-bg-04.jpg";
 import about02 from "../assets/img/about-bg-05.jpg";
 import about03 from "../assets/img/about-bg-06.jpg";
+import aboutprimary from "../assets/img/about-primary-img.jpg";
 import scrollToTop from "../includes/scrollToTop";
 
 function About() {
@@ -82,7 +83,7 @@ function About() {
               </div>
               <div className="row pt-5">
                 <div className="col-md-6 order-lg-last">
-                  <img src={about02} alt="" className="img-fluid w-100 mb-4" />
+                  <img src={aboutprimary} alt="" className="img-fluid w-100 mb-4" />
                 </div>
                 <div className="col-md-6 align-self-center">
                   <h2 className="h2 font-bold font-black pb-2">
