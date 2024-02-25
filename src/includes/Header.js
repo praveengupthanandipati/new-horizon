@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/img/logo-color.svg";
-// import "../assets/styles/bsnav.min.css";
-// import "../assets/scripts/bsnav.min.js";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
