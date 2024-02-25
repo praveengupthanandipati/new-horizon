@@ -71,6 +71,8 @@ header {
     @include max(map-get($breakpoints, "md")) {
       margin-top: 0;
       background: map-get($colors, white);
+      border-radius: 0;
+      padding:10px 0;
     }
 
     .nav-link.active {
@@ -82,7 +84,7 @@ header {
       width: 120px;
 
       @include max(map-get($breakpoints, "sm")) {
-        width: 75px;
+        width: 100px;
       }
     }
   }
@@ -90,6 +92,26 @@ header {
     &:focus {
       @include max(map-get($breakpoints, "sm")) {
         box-shadow: none;
+      }
+    }
+  }
+  .navbarnav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .navbar-toggler{
+      padding:5px;
+      height: 42px;
+    }
+  }
+  .offcanvas-body{
+    .nav-item{
+      .nav-link{
+        text-transform: uppercase;
+        border-bottom:1px solid map-get($colors, lightgray);
+        font-weight: map-get($font-weights, semibold);
+        padding:15px 0;
       }
     }
   }
