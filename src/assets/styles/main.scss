@@ -109,10 +109,10 @@ header {
     .nav-item {
       .nav-link {
         text-transform: uppercase;
+        font-weight: map-get($font-weights, semibold);
 
         @include max(map-get($breakpoints, "lg")) {
-          border-bottom: 1px solid map-get($colors, lightgray);
-          font-weight: map-get($font-weights, semibold);
+          border-bottom: 1px solid map-get($colors, lightgray);        
           padding: 15px 0;
         }
       }

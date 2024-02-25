@@ -38,7 +38,7 @@ function Header() {
               >
                 <span className="navbar-toggler-icon"></span>
               </button>
-              <NavLink className="navbar-brand" href="#">
+              <NavLink className="navbar-brand" to="/">
                 <img src={Logo} alt="" />
               </NavLink>
             </div>
@@ -50,7 +50,9 @@ function Header() {
             >
               <div className="offcanvas-header">
                 <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-                  <img src={Logo} alt="" />
+                  <NavLink className="navbar-brand" to="/">
+                    <img src={Logo} alt="" />
+                  </NavLink>
                 </h5>
                 <button
                   type="button"
