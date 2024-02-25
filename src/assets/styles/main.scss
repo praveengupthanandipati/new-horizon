@@ -72,7 +72,7 @@ header {
       margin-top: 0;
       background: map-get($colors, white);
       border-radius: 0;
-      padding:10px 0;
+      padding: 10px 0;
     }
 
     .nav-link.active {
@@ -95,23 +95,26 @@ header {
       }
     }
   }
-  .navbarnav{
+  .navbarnav {
     display: flex;
     justify-content: space-between;
     width: 100%;
 
-    .navbar-toggler{
-      padding:5px;
+    .navbar-toggler {
+      padding: 5px;
       height: 42px;
     }
   }
-  .offcanvas-body{
-    .nav-item{
-      .nav-link{
+  .offcanvas-body {
+    .nav-item {
+      .nav-link {
         text-transform: uppercase;
-        border-bottom:1px solid map-get($colors, lightgray);
-        font-weight: map-get($font-weights, semibold);
-        padding:15px 0;
+
+        @include max(map-get($breakpoints, "lg")) {
+          border-bottom: 1px solid map-get($colors, lightgray);
+          font-weight: map-get($font-weights, semibold);
+          padding: 15px 0;
+        }
       }
     }
   }
@@ -688,4 +691,3 @@ footer {
     }
   }
 }
-
