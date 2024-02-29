@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import scrollToTop from "./scrollToTop";
 import footerlogo from "../assets/img/logo-color.svg";
 
 function Footer() {
@@ -18,12 +19,7 @@ function Footer() {
     };
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  
   return (
     <div>
       <footer className="footer">

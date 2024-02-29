@@ -5,6 +5,17 @@ import { NavLink } from "react-router-dom";
 import Logo from "../assets/img/logo-color.svg";
 
 function Header() {
+  //hide canvas when click on navitem in mobile
+  const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
+
+  const toggleOffcanvas = () => {
+    setIsOffcanvasOpen(!isOffcanvasOpen);
+  };
+
+  const closeOffcanvas = () => {
+    setIsOffcanvasOpen(false);
+  };
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -32,9 +43,7 @@ function Header() {
               <button
                 className="navbar-toggler order-last"
                 type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar"
+                onClick={toggleOffcanvas}
               >
                 <span className="navbar-toggler-icon"></span>
               </button>
@@ -43,80 +52,75 @@ function Header() {
               </NavLink>
             </div>
             <div
-              className="offcanvas offcanvas-end"
+              className={`offcanvas offcanvas-end ${
+                isOffcanvasOpen ? "show" : ""
+              }`}
               tabIndex="-1"
               id="offcanvasNavbar"
               aria-labelledby="offcanvasNavbarLabel"
             >
               <div className="offcanvas-header">
                 <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-                  <NavLink className="navbar-brand" to="/">
+                  <NavLink
+                    className="navbar-brand"
+                    to="/"
+                    onClick={closeOffcanvas}
+                  >
                     <img src={Logo} alt="" />
                   </NavLink>
                 </h5>
                 <button
                   type="button"
                   className="btn-close text-reset"
-                  data-bs-dismiss="offcanvas"
+                  onClick={closeOffcanvas}
                   aria-label="Close"
                 ></button>
               </div>
               <div className="offcanvas-body">
                 <ul className="navbar-nav ms-auto">
                   <li className="nav-item">
-                    <NavLink className="nav-link" aria-current="page" to="/">
+                    <NavLink
+                      className="nav-link"
+                      aria-current="page"
+                      to="/"
+                      onClick={closeOffcanvas}
+                    >
                       Home
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/About">
+                    <NavLink
+                      className="nav-link"
+                      to="/About"
+                      onClick={closeOffcanvas}
+                    >
                       About
                     </NavLink>
                   </li>
-                  {/* <li className="nav-item dropdown">
-                      <NavLink
-                        className="nav-link dropdown-toggle"
-                        href="#"
-                        id="navbarDropdown"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        Dropdown
-                      </NavLink>
-                      <ul
-                        className="dropdown-menu"
-                        aria-labelledby="navbarDropdown"
-                      >
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            Action
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            Another action
-                          </a>
-                        </li>                        
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            Something else here
-                          </a>
-                        </li>
-                      </ul>
-                    </li> */}
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/Products">
+                    <NavLink
+                      className="nav-link"
+                      to="/Products"
+                      onClick={closeOffcanvas}
+                    >
                       Products
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/Services">
+                    <NavLink
+                      className="nav-link"
+                      to="/Services"
+                      onClick={closeOffcanvas}
+                    >
                       Services
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/Contact">
+                    <NavLink
+                      className="nav-link"
+                      to="/Contact"
+                      onClick={closeOffcanvas}
+                    >
                       Contact
                     </NavLink>
                   </li>

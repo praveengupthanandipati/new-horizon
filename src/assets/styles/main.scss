@@ -112,7 +112,7 @@ header {
         font-weight: map-get($font-weights, semibold);
 
         @include max(map-get($breakpoints, "lg")) {
-          border-bottom: 1px solid map-get($colors, lightgray);        
+          border-bottom: 1px solid map-get($colors, lightgray);
           padding: 15px 0;
         }
       }
