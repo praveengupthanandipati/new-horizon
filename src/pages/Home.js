@@ -21,7 +21,7 @@ function Home() {
   let productTitle = "Products";
 
   let whychooseusTitleTop = "Why Chooseus";
-  let whychooseusTitle = "BioSci Experts: Choose Excellence";
+  let whychooseusTitle = "Phytochem Experts: Choose Excellence";
 
   let storyTitleTop = "Our Stories";
   let storyTitle = "Blogs & Articles";
@@ -53,7 +53,7 @@ function Home() {
     },
     {
       Image: SyntheticanalogsofLeadimage,
-      Title: "Synthetic analogs of Lead",
+      Title: "Synthetic analogs of lead phytochemicals",
       Desc: "Chemical derivatives mimicking lead compounds for pharmaceutical development and research purposes.",
     },
   ];
@@ -84,7 +84,7 @@ function Home() {
       <main>
         <HomeBanner />
         {/*Home Hightlets*/}
-        <section className="highlets my-2 my-md-5 w-100">
+        <section className="highlets my-2 my-md-5 w-100 d-none">
           <div className="container">
             <div className="row">
               <div className="col-lg-4">
@@ -146,7 +146,7 @@ function Home() {
                 <div className="sectionTitle pb-3">
                   <h6>Innovative Solutions</h6>
                   <h3 class="font-bold">
-                    A reliable company for reliable products
+                    A RELIABLE COMPANY FOR RELIABLE PRODUCTS
                   </h3>
                 </div>
                 <p>
@@ -169,7 +169,7 @@ function Home() {
                     Read More About us
                   </NavLink>
                 </div>
-                <div className="row company-highletscol">
+                <div className="row company-highletscol d-none">
                   {abouthighlet.map((item) => (
                     <div className="col-4 border-end text-center">
                       <h3 className="font-bold">{item.title}</h3>
@@ -182,7 +182,7 @@ function Home() {
                 <figure className="aboutImage">
                   <img src={AboutImage} alt="" className="img-fluid" />
                   <div className="ExpNumber shadow">
-                    <div className="num font-bold">14</div>
+                    <div className="num font-bold">20</div>
                     <p className="font-primary font-semibold">
                       <small>Years of Experience</small>
                     </p>
@@ -243,7 +243,14 @@ function Home() {
               <h3 class="font-bold">{whychooseusTitle}</h3>
             </div>
             <div className="row py-2 py-md-5">
-              <div className="col-md-4 align-self-center">
+            <div className="col-md-6 d-none d-md-block">
+                <img
+                  src={Whychooseusimg}
+                  alt=""
+                  className="img-fluid whychooseusimg"
+                />
+              </div>    
+              <div className="col-md-6 align-self-center">
                 <div className="whycol d-flex">
                   <div>
                     <span class="icon-research icomoon"></span>
@@ -285,15 +292,6 @@ function Home() {
                     </p>
                   </div>
                 </div>
-              </div>
-              <div className="col-md-4 d-none d-md-block">
-                <img
-                  src={Whychooseusimg}
-                  alt=""
-                  className="img-fluid whychooseusimg"
-                />
-              </div>
-              <div className="col-md-4 align-self-center">
                 <div className="whycol d-flex">
                   <div>
                     <span class="icon-conversation icomoon"></span>
@@ -339,6 +337,7 @@ function Home() {
                   </div>
                 </div>
               </div>
+                       
             </div>
           </div>
         </section>

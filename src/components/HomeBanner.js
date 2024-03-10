@@ -12,9 +12,8 @@ function HomeBanner() {
     {
       id: 1,
       imageName: Banner01,
-      title: "Genomics Unveiled",
-      description:
-        "Explore genomics' transformative role in healthcare, decoding DNA for personalized treatments and groundbreaking bioscience advancements.",
+      title: "Exploring the wonders of Phytochemicals ",
+      description: "Embark on a fascinating journey into the heart of phytochemicals with our captivating exploration.",
     },
     {
       id: 2,
@@ -57,7 +56,7 @@ function HomeBanner() {
               </div>
               <article>
                 <div className="row">
-                  <div className="col-md-6 col-sm-10">
+                  <div className="col-md-8 col-sm-10">
                     <h2 className="font-bold font-white">{item.title}</h2>
                     <p className="font-white">{item.description}</p>
                   </div>

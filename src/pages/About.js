@@ -46,7 +46,7 @@ function About() {
                     <div className="col-md-6 align-self-center position-relative">
                       <img src={about01} alt="" className="img-fluid" />
                       <div className="position-relative experience-div">
-                        <div className="count font-bold">12</div>
+                        <div className="count font-bold">20</div>
                         <h6 className="font-white">Years of Experience</h6>
                       </div>
                     </div>

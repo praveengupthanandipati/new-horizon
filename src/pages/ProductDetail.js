@@ -306,7 +306,7 @@ const ProductDetail = memo(() => {
                               Inventory Status
                             </p>
                             <h6 className="h6">
-                              {product?.InventoryStatus || "No Data Found"}
+                              <strong>{product?.InventoryStatus || "No Data Found"}</strong>
                             </h6>
                           </div>
                         </div>
