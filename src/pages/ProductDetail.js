@@ -2,9 +2,9 @@ import React, { useEffect, useState, memo } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import phytochemicals from "../data/Phytochemicals_data";
 import ProductEnquiryform from "./ProductEnquiry";
+import noimage from "../assets/img/noimage.jpg";
 
 const ProductDetail = memo(() => {
-
   //to get id from url product id
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
@@ -70,7 +70,20 @@ const ProductDetail = memo(() => {
               <div className="row">
                 <div className="col-md-3">
                   <figure className="border p-3 rounded-3 text-center sticky-top">
-                    <img src={product.Image} className="img-fluid" />
+                    {/* <img src={product.Image} className="img-fluid" /> */}
+                    {product.Image ? (
+                      <img
+                        src={product.Image}
+                        className="img-fluid"
+                        alt="Product"
+                      />
+                    ) : (
+                      <img
+                        src={noimage}
+                        className="img-fluid"
+                        alt="No Image Found"
+                      />
+                    )}
                   </figure>
                 </div>
                 <div className="col-md-9">
@@ -306,7 +319,9 @@ const ProductDetail = memo(() => {
                               Inventory Status
                             </p>
                             <h6 className="h6">
-                              <strong>{product?.InventoryStatus || "No Data Found"}</strong>
+                              <strong>
+                                {product?.InventoryStatus || "No Data Found"}
+                              </strong>
                             </h6>
                           </div>
                         </div>
