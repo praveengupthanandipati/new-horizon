@@ -9,13 +9,8 @@ function Products() {
   const pageIntro = "Our Popular Products";
   const navigate = useNavigate();
   scrollToTop();
-  // const scrollToTop = () => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  // };
 
+  //on click on product redirecting to poroduct detail  based on ID ID
   const handleTabClick = (id, type) => {
     localStorage.setItem("id", id);
     scrollToTop(0, 0);

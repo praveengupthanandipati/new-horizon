@@ -1,11 +1,11 @@
 import React from "react";
 import { useEffect, useState, useRef } from "react";
-// import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/img/logo-color.svg";
 
 function Header() {
-  //hide canvas when click on navitem in mobile
+
+  //mobile on click nav, hide off canvas
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
 
   const toggleOffcanvas = () => {
@@ -16,8 +16,8 @@ function Header() {
     setIsOffcanvasOpen(false);
   };
 
+  //on scroll add class to header
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;

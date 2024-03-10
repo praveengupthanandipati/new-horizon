@@ -1,10 +1,11 @@
 import React, { useEffect, useState, memo } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import phytochemicals from "../data/Phytochemicals_data";
-// import ProductEnquiryform from "./ProductEnquiryform";
 import ProductEnquiryform from "./ProductEnquiry";
 
 const ProductDetail = memo(() => {
+
+  //to get id from url product id
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
   const id = queryParams.get("q");
@@ -22,21 +23,16 @@ const ProductDetail = memo(() => {
       setProduct(foundProduct);
       console.log(foundProduct);
     }
-
     setLoading(false);
   };
-  // useEffect(() => {
 
-  //   console.log("getData...");
-  // }, [id]);
-
+  //if product loading is true calling product id
   if (loading) {
     console.log("Loading...");
     getData();
 
     return <div>Loading...</div>;
   }
-
   if (!product) {
     return <div>Product not found</div>;
   }
