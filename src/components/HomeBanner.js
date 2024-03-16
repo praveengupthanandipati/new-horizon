@@ -13,7 +13,8 @@ function HomeBanner() {
       id: 1,
       imageName: Banner01,
       title: "Exploring the wonders of Phytochemicals ",
-      description: "Embark on a fascinating journey into the heart of phytochemicals with our captivating exploration.",
+      description:
+        "Embark on a fascinating journey into the heart of phytochemicals with our captivating exploration.",
     },
     {
       id: 2,
@@ -40,6 +41,19 @@ function HomeBanner() {
   return (
     <div>
       <div className="HomeSlider">
+        <article className="position-absolute article-slider">
+          <div className="row">
+            <div className="col-md-8 col-sm-10">
+              <h2 className="font-bold font-white">
+                Exploring the wonders of Phytochemicals
+              </h2>
+              <p className="font-white d-none d-md-block">
+                Embark on a fascinating journey into the heart of phytochemicals
+                with our captivating exploration.
+              </p>
+            </div>
+          </div>
+        </article>
         <Swiper
           pagination={{ clickable: true }}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -54,7 +68,7 @@ function HomeBanner() {
                   className="img-fluid bannerimg"
                 />
               </div>
-              <article>
+              <article className="d-none">
                 <div className="row">
                   <div className="col-md-8 col-sm-10">
                     <h2 className="font-bold font-white">{item.title}</h2>
