@@ -193,35 +193,6 @@ function Home() {
           </div>
         </section>
 
-        {/* Home page Categories */}
-        <section className="HomeCategories">
-          <div className="container">
-            <div className="sectionTitle pb-3">
-              <h6>{categoryTitleTop}</h6>
-              <h3 class="font-bold">{categoryTitle}</h3>
-            </div>
-            <div className="row">
-              {categoryHomeItems.map((item) => (
-                <div className="col-lg-4">
-                  <div className="cat-col">
-                    <NavLink to="/Products">
-                      <img
-                        src={item.Image}
-                        alt=""
-                        className="img-fluid w-100"
-                      />
-                      <article className="p-3">
-                        <h4 className="font-bold">{item.Title}</h4>
-                        <p>{item.Desc}</p>
-                      </article>
-                    </NavLink>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/*Popular Products*/}
         <section className="HomeProducts">
           <div className="container">

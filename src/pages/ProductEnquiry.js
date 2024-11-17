@@ -107,10 +107,10 @@ const ProductEnquiryform = (product) => {
 
     emailjs
       .send(
-        "service_ddavzm6", //service id
-        "template_fdcj7y2", //template id
+        "service_nhylhmp", //service id
+        "template_3q9ure8", //template id
         emailData,
-        "WOiMeMwLOwRKj3EPt" //public key
+        "l99rDhK_D3F96fib5" //public key
       )
       .then(
         (result) => {
@@ -120,9 +120,9 @@ const ProductEnquiryform = (product) => {
           setStatusMessage("Mail failed to send. Please try again."); // Update status message on failure
         }
       );
-      setTimeout(()=>{
-        setStatusMessage(null);
-      }, 30000);
+    setTimeout(() => {
+      setStatusMessage(null);
+    }, 30000);
   };
 
   return (

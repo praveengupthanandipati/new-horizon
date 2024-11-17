@@ -45,7 +45,8 @@ function HomeBanner() {
           <div className="row">
             <div className="col-md-8 col-sm-10">
               <h2 className="font-bold font-white">
-                Exploring the wonders of Phytochemicals
+                A Reliable source for biologically active phytochemicals & their
+                analogues
               </h2>
               <p className="font-white d-none d-md-block">
                 Embark on a fascinating journey into the heart of phytochemicals

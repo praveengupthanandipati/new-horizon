@@ -110,20 +110,6 @@ const ProductDetail = memo(() => {
                     <li className="nav-item" role="presentation">
                       <button
                         className="nav-link"
-                        id="pills-TechnicalNote-tab"
-                        data-bs-toggle="pill"
-                        data-bs-target="#pills-TechnicalNote"
-                        type="button"
-                        role="tab"
-                        aria-controls="pills-TechnicalNote"
-                        aria-selected="false"
-                      >
-                        Technical Note
-                      </button>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                      <button
-                        className="nav-link"
                         id="pills-SpectrualData-tab"
                         data-bs-toggle="pill"
                         data-bs-target="#pills-SpectrualData"
@@ -135,6 +121,21 @@ const ProductDetail = memo(() => {
                         COA & Spectrual data
                       </button>
                     </li>
+                    <li className="nav-item" role="presentation">
+                      <button
+                        className="nav-link"
+                        id="pills-TechnicalNote-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-TechnicalNote"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-TechnicalNote"
+                        aria-selected="false"
+                      >
+                        Technical Note with Key References
+                      </button>
+                    </li>
+                   
                     <li className="nav-item" role="presentation">
                       <button
                         className="nav-link"

@@ -62,11 +62,12 @@ function Contact() {
         firstName,
         lastName,
         phoneNumber,
+        companyName,
         email,
         subject,
         description,
-      };
-      sendEmail(formData);
+      };     
+      sendEmail(formData);     
       form.current.reset();
       setFirstName("");
       setLastName("");
@@ -89,13 +90,14 @@ function Contact() {
       subject: formData.subject,
       message: formData.description,
     };
+    // console.log(companyName, "This is company name");
 
     emailjs
       .send(
-        "service_ddavzm6", // service id
-        "template_pii2o4m", //tmplate id
+        "service_nhylhmp", // service id
+        "template_gjcxtre", //tmplate id
         emailData,
-        "WOiMeMwLOwRKj3EPt" //public key
+        "l99rDhK_D3F96fib5" //public key
       )
       .then(
         (result) => {

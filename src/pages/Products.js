@@ -5,7 +5,7 @@ import PhytochemicalsPdf from "../assets/files/Listofphytochemicalswithstructure
 import scrollToTop from "../includes/scrollToTop";
 
 function Products() {
-  const pageTitle = "Products";
+  const pageTitle = "Biologically Active Phytochemicals";
   const pageIntro = "Our Popular Products";
   const navigate = useNavigate();
   scrollToTop();
@@ -50,7 +50,19 @@ function Products() {
               </ol>
             </nav>
           </div>
+
           <div className="container">
+            <div className="row justify-content-end">
+              <div className="col-md-6 text-end">
+                <NavLink
+                  className="green-btn"
+                  to={PhytochemicalsPdf}
+                  target="_blank"
+                >
+                  List of Phytochemicals with structure activities
+                </NavLink>
+              </div>
+            </div>
             <div className="pageContainer">
               <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li className="nav-item" role="presentation">
@@ -64,7 +76,7 @@ function Products() {
                     aria-controls="pills-Phytochemical-Reference-Standards"
                     aria-selected="true"
                   >
-                    Phytochemical Reference Standards
+                    In Stock
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
@@ -78,21 +90,7 @@ function Products() {
                     aria-controls="pills-Lead-Phytochemicals"
                     aria-selected="false"
                   >
-                    Lead Phytochemicals
-                  </button>
-                </li>
-                <li className="nav-item" role="presentation">
-                  <button
-                    className="nav-link"
-                    id="pills-Synthetic-analogs-of-Lead-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#pills-Synthetic-analogs-of-Lead"
-                    type="button"
-                    role="tab"
-                    aria-controls="pills-Synthetic-analogs-of-Lead"
-                    aria-selected="false"
-                  >
-                    Synthetic analogs of Lead
+                    Future Products
                   </button>
                 </li>
               </ul>
@@ -103,31 +101,21 @@ function Products() {
                   role="tabpanel"
                   aria-labelledby="pills-Phytochemical-Reference-Standards-tab"
                 >
-                  <div className="row">
-                    <div className="col-md-6">
-                      <NavLink
-                        className="green-btn"
-                        to={PhytochemicalsPdf}
-                        target="_blank"
-                      >
-                        List of Phytochemicals with structure activities
-                      </NavLink>
-                    </div>
-                  </div>
-
                   {/* table responsive starts here */}
                   <div className="table-responsive">
                     <table className="table table-hover">
                       <thead>
                         <tr>
-                          <th scope="col">Chemical Name</th>
+                          <th scope="col">Name of the Phytochemical</th>
+                          <th scope="col">Botanical Source</th>
                           <th scope="col">CAS Number</th>
+                          <th scope="col">Functional Activity</th>
                         </tr>
                       </thead>
                       <tbody>
                         {phytochemicals.map((item, index) => (
                           <tr key={index}>
-                            <td width="65%">
+                            <td width="40%">
                               <a
                                 href=""
                                 onClick={() => handleTabClick(item.id, "all")}
@@ -135,7 +123,9 @@ function Products() {
                                 {item.Product}
                               </a>
                             </td>
-                            <td width="35%">{item.CASNumber}</td>
+                            <td width="20%">{item.BotanicalSource}</td>
+                            <td width="20%">{item.CASNumber}</td>
+                            <td width="20%">{""}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -154,14 +144,16 @@ function Products() {
                     <table className="table table-hover">
                       <thead>
                         <tr>
-                          <th scope="col">Chemical Name</th>
+                          <th scope="col">Name of the Phytochemical</th>
+                          <th scope="col">Botanical Source</th>
                           <th scope="col">CAS Number</th>
+                          <th scope="col">Functional Activity</th>
                         </tr>
                       </thead>
                       <tbody>
                         {leadItems.map((item, index) => (
                           <tr key={index}>
-                            <td width="85%">
+                            <td width="40%">
                               <a
                                 href=""
                                 onClick={() => handleTabClick(item.id, "lead")}
@@ -169,43 +161,9 @@ function Products() {
                                 {item.Product}
                               </a>
                             </td>
-                            <td width="15%">{item.CASNumber}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                  {/* table resposive ends*/}
-                </div>
-                <div
-                  className="tab-pane fade"
-                  id="pills-Synthetic-analogs-of-Lead"
-                  role="tabpanel"
-                  aria-labelledby="pills-Synthetic-analogs-of-Lead-tab"
-                >
-                  {/* table responsive starts here */}
-                  <div className="table-responsive">
-                    <table className="table table-hover">
-                      <thead>
-                        <tr>
-                          <th scope="col">Chemical Name</th>
-                          <th scope="col">CAS Number</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {analogsItems.map((item, index) => (
-                          <tr key={index}>
-                            <td width="85%">
-                              <a
-                                href=""
-                                onClick={() =>
-                                  handleTabClick(item.id, "analog")
-                                }
-                              >
-                                {item.Product}
-                              </a>
-                            </td>
-                            <td width="15%">{item.CASNumber}</td>
+                            <td width="20%">{item.BotanicalSource}</td>
+                            <td width="20%">{item.CASNumber}</td>
+                            <td width="20%">{""}</td>
                           </tr>
                         ))}
                       </tbody>

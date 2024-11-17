@@ -4,7 +4,6 @@ import scrollToTop from "./scrollToTop";
 import footerlogo from "../assets/img/logo-color.svg";
 
 function Footer() {
-
   //on click browser move to top
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -17,7 +16,7 @@ function Footer() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
   return (
     <div>
       <footer className="footer">
@@ -65,54 +64,23 @@ function Footer() {
                     </li>
                   </ul>
                 </div>
-                <div className="col-md-4 d-none d-md-block">
-                  <h5 className="footer-col-title font-bold">Products</h5>
-                  <ul>
-                    <li>
-                      <NavLink to="/Products">
-                        Phytochemical Reference Standards
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/Products">Lead Phytochemicals</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/Products">
-                        Synthetic analogs of Lead Phytochemicals
-                      </NavLink>
-                    </li>
-                  </ul>
-                </div>
                 <div className="col-md-6 pt-4 pt-md-0">
                   <h5 className="footer-col-title font-bold">Contact</h5>
                   <ul className="contacts">
                     <li>
-                      <span className="icon-phone-call"></span> +91-8639254810
+                      <span className="icon-phone-call"></span> +91-9849601776
                     </li>
                     <li>
                       <span className="icon-email"></span>{" "}
-                      nhbotanicals2023@gmail.com
+                      info@newhorizonbotanicals.com
                     </li>
                     <li>
-                      <h6 className="font-bold">
-                        New Horozon Botanicals
-                      </h6>
+                      <h6 className="font-bold">New Horozon Botanicals</h6>
                       <span className="icon-pin"></span> H.No: 8-6-249/22/p,
                       Road # 2 Sri Venkataramana Colony Vanasthalipuram
                       Hyderabad-500070, India
                     </li>
                   </ul>
-                  <div className="pt-md-4 social">
-                    <NavLink to="">
-                      <span className="icon-facebook"></span>
-                    </NavLink>
-                    <NavLink to="">
-                      <span className="icon-linkedin"></span>
-                    </NavLink>
-                    <NavLink to="">
-                      <span className="icon-twitter"></span>
-                    </NavLink>
-                  </div>
                 </div>
               </div>
             </div>

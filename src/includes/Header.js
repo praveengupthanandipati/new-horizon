@@ -1,10 +1,9 @@
 import React from "react";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/img/logo-color.svg";
 
 function Header() {
-
   //mobile on click nav, hide off canvas
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
 
