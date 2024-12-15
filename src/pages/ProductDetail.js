@@ -135,7 +135,7 @@ const ProductDetail = memo(() => {
                         Technical Note with Key References
                       </button>
                     </li>
-                   
+
                     <li className="nav-item" role="presentation">
                       <button
                         className="nav-link"
@@ -353,7 +353,20 @@ const ProductDetail = memo(() => {
                       role="tabpanel"
                       aria-labelledby="pills-Analogs-tab"
                     >
-                      Analogs Not Available Currently, We will get back soon
+                      <div className="row">
+                        <div className="col-md-4">
+                          <div className="product-desc-item">
+                            <p className="text-uppercase font-bold position-relative">
+                              Analogues
+                            </p>
+                            <h6 className="h6">
+                              <strong>
+                                {product?.Analogues || "Not Available"}
+                              </strong>
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

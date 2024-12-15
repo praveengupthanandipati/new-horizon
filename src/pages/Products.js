@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import phytochemicals from "../data/Phytochemicals_data";
 import PhytochemicalsPdf from "../assets/files/Listofphytochemicalswithstructuresandactivity.pdf";
+import FurutreProductsPdf from "../assets/files/future-products.pdf";
 import scrollToTop from "../includes/scrollToTop";
 
 function Products() {
@@ -18,10 +19,10 @@ function Products() {
   };
 
   const leadItems = phytochemicals.filter(
-    (item) => item.type === "lead" || item.type === "lead_analogs"
+    (item) => item.type === "lead" || item.type === "Not Available"
   );
   const analogsItems = phytochemicals.filter(
-    (item) => item.type === "analogs" || item.type === "lead_analogs"
+    (item) => item.type === "analogs" || item.type === "Available"
   );
 
   return (
@@ -110,12 +111,13 @@ function Products() {
                           <th scope="col">Botanical Source</th>
                           <th scope="col">CAS Number</th>
                           <th scope="col">Functional Activity</th>
+                          <th scope="col">Analogues</th>
                         </tr>
                       </thead>
                       <tbody>
                         {phytochemicals.map((item, index) => (
                           <tr key={index}>
-                            <td width="40%">
+                            <td width="30%">
                               <a
                                 href=""
                                 onClick={() => handleTabClick(item.id, "all")}
@@ -123,9 +125,10 @@ function Products() {
                                 {item.Product}
                               </a>
                             </td>
-                            <td width="20%">{item.BotanicalSource}</td>
-                            <td width="20%">{item.CASNumber}</td>
-                            <td width="20%">{""}</td>
+                            <td width="15%">{item.BotanicalSource}</td>
+                            <td width="15%">{item.CASNumber}</td>
+                            <td width="15%">{""}</td>
+                            <td width="15%">{item.Analogues}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -139,37 +142,13 @@ function Products() {
                   role="tabpanel"
                   aria-labelledby="pills-Lead-Phytochemicals-tab"
                 >
-                  {/* table responsive starts here */}
-                  <div className="table-responsive">
-                    <table className="table table-hover">
-                      <thead>
-                        <tr>
-                          <th scope="col">Name of the Phytochemical</th>
-                          <th scope="col">Botanical Source</th>
-                          <th scope="col">CAS Number</th>
-                          <th scope="col">Functional Activity</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {leadItems.map((item, index) => (
-                          <tr key={index}>
-                            <td width="40%">
-                              <a
-                                href=""
-                                onClick={() => handleTabClick(item.id, "lead")}
-                              >
-                                {item.Product}
-                              </a>
-                            </td>
-                            <td width="20%">{item.BotanicalSource}</td>
-                            <td width="20%">{item.CASNumber}</td>
-                            <td width="20%">{""}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                  {/* table resposive ends*/}
+                  <NavLink
+                    className="green-btn"
+                    to={FurutreProductsPdf}
+                    target="_blank"
+                  >
+                    Download Future Products
+                  </NavLink>
                 </div>
               </div>
             </div>
